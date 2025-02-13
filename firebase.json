@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "public",
+    "site": "sabina-90-5f6e3",
     "ignore": [
       "firebase.json",
       "**/.*",
