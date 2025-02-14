@@ -1,11 +1,17 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "build",
     "site": "sabina-90-5f6e3",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
