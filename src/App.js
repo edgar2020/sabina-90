@@ -20,8 +20,8 @@ const Home = () => {
     return (
         <div>
             <h2>Save the Date</h2>
-            <button onClick={() =>
-                 navigate("/contact")}>Go to Contact</button>
+            {/* <button onClick={() =>
+                 navigate("/contact")}>Go to Contact</button> */}
         </div>
     );
 };
@@ -30,7 +30,7 @@ const Home = () => {
 const RSVP = () => (
     <div>
         <h2>RSVP</h2>
-        <nav>
+        {/* <nav>
             <ul>
                 <li>
                     <Link to="team">Our Team</Link>
@@ -40,15 +40,15 @@ const RSVP = () => (
                 </li>
             </ul>
         </nav>
-        <Outlet />
+        <Outlet /> */}
         <Form/>
     </div>
 );
 
 // Components for other pages
-const Contact = () => <h2>Contact Page</h2>;
-const Team = () => <h2>Team Page</h2>;
-const Company = () => <h2>Company Page</h2>;
+// const Contact = () => <h2>Contact Page</h2>;
+// const Team = () => <h2>Team Page</h2>;
+// const Company = () => <h2>Company Page</h2>;
 
 function App() {
     return (
@@ -63,11 +63,9 @@ function App() {
             {/*Implementing Routes for respective Path */}
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/RSVP" element={<RSVP />}>
-                    <Route path="team" element={<Team />} />
-                    <Route path="company" element={<Company />} />
-                </Route>
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/RSVP" element={<RSVP />}/>
+                {/* </Route> */}
+                {/* <Route path="/contact" element={<Contact />} /> */}
             </Routes>
         </Router>
     );
