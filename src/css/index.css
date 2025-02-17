@@ -1,0 +1,285 @@
+
+html
+{
+  background-color: rgb(255, 237, 178);
+}
+
+#root
+{
+  /* background-color: rgb(255, 0, 0); */
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+
+  /* \colors */
+  --paper-color: rgb(255, 250, 243);
+
+}
+
+.SaveTheDateOuterDiv
+{
+  display: flex;               /* Enable Flexbox for modern browsers */
+  justify-content: center;     /* Center horizontally */
+  /* align-items: center;         Center vertically */
+  height: 100vh;       
+  position: relative;
+  /* background-color: rgb(133, 75, 0); */
+}
+
+.saveTheDateContainer
+{
+  margin: 0 auto;
+  border-radius: 9px;
+  -webkit-filter: drop-shadow(5px 5px 10px #000000); /* Safari */
+  -moz-filter: drop-shadow(5px 5px 10px #000000); /* Older Firefox versions */
+  -ms-filter: drop-shadow(5px 5px 10px #000000); /* For older versions of IE */
+  filter: drop-shadow(5px 5px 10px #000000);
+  background-color: none;
+  height: 90vh;
+  width: 65vh;
+  position: absolute;
+  margin-top: 20px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+.saveTheDateContent
+{
+  
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--paper-color);
+  height: 100%;
+   color: #1f0b00;
+                      
+}
+
+
+.exclamation
+{
+  margin-right: -2.6vh;
+  margin-left: -2.6vh;
+}
+.mainContentHeader{
+  
+  text-align: center; /* Optional: centers the text */
+  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+  font-size: 18vh; /* This is a fallback for older browsers */
+  letter-spacing: -1.1vh;
+  line-height: 0.9;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+.contentSubHeader{
+  
+  text-align: center; /* Optional: centers the text */
+  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+  font-size: 7vh; /* This is a fallback for older browsers */
+  margin-top: -1.7vh;
+  line-height: 0.9;
+  margin-bottom: 0;
+  
+}
+.reserveHeader{
+  
+  text-align: center; /* Optional: centers the text */
+  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+  font-size: 4vh; /* This is a fallback for older browsers */
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #000000;
+  color: var(--paper-color);
+}
+.reserveTheDate {
+  
+  text-align: center; /* Optional: centers the text */
+  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+  font-size: 3vh; /* This is a fallback for older browsers */
+  margin-bottom: 0;
+  width: fit-content;
+}
+.old-text
+{
+  mask-size: contain; 
+  -webkit-mask-size: contain;  
+  -webkit-mask-image: url("../images/crack-grunge-texture-PNG-thumb24.png");  
+  -o-mask-image:url("../images/crack-grunge-texture-PNG-thumb24.png"); 
+  -moz-mask-image:url("../images/crack-grunge-texture-PNG-thumb24.png");  
+  -ms-mask-image:url("../images/crack-grunge-texture-PNG-thumb24.png");  
+  mask-image: url("../images/crack-grunge-texture-PNG-thumb24.png"); 
+}
+
+.titleInsideCalendarContainer
+{
+  width: 100%;
+  /* background-color: red; */
+  transform: rotate(-5deg);
+}
+.fingerSpan
+{
+  display: inline-block;
+  margin-left: -5vh;
+}
+
+.finger
+{
+  width: 10vh;
+  transform: rotate(-10deg);
+  vertical-align: top;
+  padding-top: 0.3vh;
+  padding-right: 5.5vh;
+}
+
+.fingerText
+{
+  margin-top: -1vh;
+}
+.celebrarText
+{
+  font-size: 2.2vh; 
+  letter-spacing: -0.15vh;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 14vh;
+  width: 100%;
+}
+
+.th-tag
+{
+  font-size: 1.2vh;
+}
+.calendar
+{
+
+  height: 34vh;
+  margin-top: 0.5vh;
+  -webkit-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
+  box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
+}
+
+.calendarContainer
+{
+  width: 100%;
+  height: 40vh;
+}
+
+.name
+{
+  font-size: 11vh;
+  margin-top: 0;
+  line-height: 0.8;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+  text-align: center;
+}
+
+.fechaText
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  letter-spacing: -0.15vh;
+  font-size: 2.3vh; /* This is a fallback for older browsers */
+}
+
+.overlay
+{
+  
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode:multiply;
+  position:absolute;
+  display:inline-block;
+  left:0;
+  opacity: 0.4;
+  top:0;
+  right:0;
+  bottom:0;
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  
+}
+
+@media (max-height: 550px) {
+  /* … */
+/* } */
+
+/* @media all and (orientation: portrait) { */
+
+  .SaveTheDateOuterDiv
+  {
+    /* background-color: rgb(255, 145, 0); */
+  }
+
+  .saveTheDateContainer
+  {
+    height: 96.25vw;
+    width: 70vw;
+    
+  }
+  .mainContentHeader{
+  
+    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+    font-size: 13vw; /* This is a fallback for older browsers */
+  }
+  .contentSubHeader{
+    
+    text-align: center; /* Optional: centers the text */
+    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+    font-size: 7vw; /* This is a fallback for older browsers */
+  }
+  .reserveHeader{
+    
+    text-align: center; /* Optional: centers the text */
+    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+    font-size: 4.5vw; /* This is a fallback for older browsers */
+  }
+}
+
+
+@media (max-width: 550px) {
+
+
+  .SaveTheDateOuterDiv
+  {
+    /* background-color: rgb(255, 145, 0); */
+  }
+
+  .saveTheDateContainer
+  {
+    height: 96.25vw;
+    width: 70vw;
+  }
+  .mainContentHeader{
+  
+    text-align: center; /* Optional: centers the text */
+    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+    font-size: 13vw; /* This is a fallback for older browsers */
+  }
+  .contentSubHeader{
+    
+    text-align: center; /* Optional: centers the text */
+    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+    font-size: 7vw; /* This is a fallback for older browsers */
+  }
+  .reserveHeader{
+    
+    text-align: center; /* Optional: centers the text */
+    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
+    font-size: 4.5vw; /* This is a fallback for older browsers */
+  }
+}

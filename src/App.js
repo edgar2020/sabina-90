@@ -1,6 +1,7 @@
 // src/App.js
 import React from "react";
 import Form from "./components/Form"
+import SaveTheDate from "./components/SaveTheDate"
 
 
 import {
@@ -15,11 +16,11 @@ import {
 
 // Save the Date Page Component
 const Home = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     return (
-        <div>
-            <h2>Save the Date</h2>
+        <div className="SaveTheDateOuterDiv">
+            <SaveTheDate/>
             {/* <button onClick={() =>
                  navigate("/contact")}>Go to Contact</button> */}
         </div>
@@ -53,19 +54,17 @@ const RSVP = () => (
 function App() {
     return (
         <Router>
-            <nav>
+            {/* <nav>
                 <ul>
                     <li>
                         <Link to="/RSVP">RSVP</Link>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
             {/*Implementing Routes for respective Path */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/RSVP" element={<RSVP />}/>
-                {/* </Route> */}
-                {/* <Route path="/contact" element={<Contact />} /> */}
             </Routes>
         </Router>
     );
