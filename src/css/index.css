@@ -50,7 +50,6 @@ html
 
 .saveTheDateContent
 {
-  
   text-align: center;
   border-radius: 5px;
   background-color: var(--paper-color);
@@ -116,28 +115,29 @@ html
 
 .titleInsideCalendarContainer
 {
-  width: 100%;
-  /* background-color: red; */
-  transform: rotate(-5deg);
+  
+  margin: 0 auto;
+  margin-left: 13%;
+  width: fit-content;
 }
 .fingerSpan
 {
   display: inline-block;
-  margin-left: -5vh;
+  position: relative;
+  width: fit-content;
 }
 
 .finger
 {
   width: 10vh;
   transform: rotate(-10deg);
-  vertical-align: top;
-  padding-top: 0.3vh;
-  padding-right: 5.5vh;
+  margin-top: 5vh;
+  position: relative;
 }
 
 .fingerText
 {
-  margin-top: -1vh;
+  vertical-align: top;
 }
 .celebrarText
 {
@@ -155,9 +155,9 @@ html
 }
 .calendar
 {
-
+  margin-left: 0 auto;
   height: 34vh;
-  margin-top: 0.5vh;
+  margin-top: -2.4vh;
   -webkit-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
@@ -165,6 +165,8 @@ html
 
 .calendarContainer
 {
+  
+  transform: rotate(-5deg);
   width: 100%;
   height: 40vh;
 }
@@ -193,7 +195,6 @@ html
 
 .overlay
 {
-  
   border-radius: 5px;
   width: 100%;
   height: 100%;
@@ -211,75 +212,138 @@ html
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  
 }
 
-@media (max-height: 550px) {
-  /* … */
-/* } */
 
-/* @media all and (orientation: portrait) { */
+@media (max-width: 400px) {
 
-  .SaveTheDateOuterDiv
+  html
   {
-    /* background-color: rgb(255, 145, 0); */
+    background-color: gainsboro;
   }
 
   .saveTheDateContainer
   {
-    height: 96.25vw;
-    width: 70vw;
-    
+    width: 310px;
+    height: 436px;
+    margin-top: 5px;
   }
-  .mainContentHeader{
+
+  .exclamation
+  {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .mainContentHeader
+  {
+    margin-left: -5px;
+    font-size: 100px; 
+    letter-spacing: -8px;
+  }
+  .contentSubHeader
+  {  
+    font-size: 39px; /* This is a fallback for older browsers */
+    margin-top: -10px;
+  }
+  .reserveHeader
+  {  
+    font-size: 22px; /* This is a fallback for older browsers */
+  }
+  .reserveTheDate 
+  { 
+    margin-top: 0;
+    background-color: darkgoldenrod; 
+    font-size: 18px; /* This is a fallback for older browsers */
+  }
   
-    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-    font-size: 13vw; /* This is a fallback for older browsers */
+  .titleInsideCalendarContainer
+  {
+    margin-left: 13%;
+    background-color: rgb(158, 158, 255);
   }
-  .contentSubHeader{
+  
+  .finger
+  {
+    width: 45px;
+    transform: rotate(-10deg);
+    margin-top: 0px;
+    position: relative;
+  }
+  
+  .celebrarText
+  {
+    font-size: 2.2vh; 
+    letter-spacing: -0.15vh;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 14vh;
+    width: 100%;
+  }
+  
+  .th-tag
+  {
+    font-size: 1.2vh;
+  }
+  .calendar
+  {
+    margin-left: 0 auto;
+    height: 34vh;
+    margin-top: -2.4vh;
+    -webkit-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
+    box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
+  }
+  
+  .calendarContainer
+  {
     
-    text-align: center; /* Optional: centers the text */
-    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-    font-size: 7vw; /* This is a fallback for older browsers */
+    transform: rotate(-5deg);
+    width: 100%;
+    height: 40vh;
   }
-  .reserveHeader{
-    
-    text-align: center; /* Optional: centers the text */
-    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-    font-size: 4.5vw; /* This is a fallback for older browsers */
+  
+  .name
+  {
+    font-size: 11vh;
+    margin-top: 0;
+    line-height: 0.8;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
+    text-align: center;
   }
+  
+  .fechaText
+  {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: -0.15vh;
+    font-size: 2.3vh; /* This is a fallback for older browsers */
+  }
+  
+  .overlay
+  {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode:multiply;
+    position:absolute;
+    display:inline-block;
+    left:0;
+    opacity: 0.4;
+    top:0;
+    right:0;
+    bottom:0;
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }  
+  
 }
 
-
-@media (max-width: 550px) {
-
-
-  .SaveTheDateOuterDiv
-  {
-    /* background-color: rgb(255, 145, 0); */
-  }
-
-  .saveTheDateContainer
-  {
-    height: 96.25vw;
-    width: 70vw;
-  }
-  .mainContentHeader{
-  
-    text-align: center; /* Optional: centers the text */
-    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-    font-size: 13vw; /* This is a fallback for older browsers */
-  }
-  .contentSubHeader{
-    
-    text-align: center; /* Optional: centers the text */
-    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-    font-size: 7vw; /* This is a fallback for older browsers */
-  }
-  .reserveHeader{
-    
-    text-align: center; /* Optional: centers the text */
-    font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-    font-size: 4.5vw; /* This is a fallback for older browsers */
-  }
-}

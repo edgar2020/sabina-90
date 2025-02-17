@@ -17,8 +17,8 @@ function SaveTheDate() {
                     <div className='fingerSpan fingerText'>
                         <h2 className='geist-mono-500 old-text reserveTheDate'>Y RESERVA LA FECHA</h2>
                     </div>
-                    <img className="calendar" src={Calendar} alt=''/>
                 </div>
+                <img className="calendar" src={Calendar} alt=''/>
 
             </div>
             <h2 className='geist-mono-500 old-text celebrarText'>ESTAREMOS CELEBRANDO EL 90<sup className='th-tag'>th</sup> CUMPLEÑOS DE LA SEÑORA</h2>
