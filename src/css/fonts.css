@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arbutus&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+.geist-mono-900 {
+    font-family: "Geist Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .geist-mono-100 {
+    font-family: "Geist Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .geist-mono-300 {
+    font-family: "Geist Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .geist-mono-400 {
+    font-family: "Geist Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .geist-mono-500 {
+    font-family: "Geist Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .atkinson-bold-800 {
+    font-family: "Atkinson Hyperlegible Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+  }
+  .atkinson-200 {
+    font-family: "Atkinson Hyperlegible Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .rye-font {
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .arbutus-font {
+    font-family: "Arbutus", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .gwendolyn-regular {
+    font-family: "Gwendolyn", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .gwendolyn-bold {
+    font-family: "Gwendolyn", serif;
+    font-weight: 700;
+    font-style: normal;
+  }

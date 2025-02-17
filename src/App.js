@@ -1,25 +1,73 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import Form from "./components/Form"
+import SaveTheDate from "./components/SaveTheDate"
+
+
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+    useNavigate,
+    Outlet,
+} from "react-router-dom";
+
+
+// Save the Date Page Component
+const Home = () => {
+    // const navigate = useNavigate();
+
+    return (
+        <div className="SaveTheDateOuterDiv">
+            <SaveTheDate/>
+            {/* <button onClick={() =>
+                 navigate("/contact")}>Go to Contact</button> */}
+        </div>
+    );
+};
+
+// RSVP Page Component 
+const RSVP = () => (
+    <div>
+        <h2>RSVP</h2>
+        {/* <nav>
+            <ul>
+                <li>
+                    <Link to="team">Our Team</Link>
+                </li>
+                <li>
+                    <Link to="company">Our Company</Link>
+                </li>
+            </ul>
+        </nav>
+        <Outlet /> */}
+        <Form/>
+    </div>
+);
+
+// Components for other pages
+// const Contact = () => <h2>Contact Page</h2>;
+// const Team = () => <h2>Team Page</h2>;
+// const Company = () => <h2>Company Page</h2>;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            {/* <nav>
+                <ul>
+                    <li>
+                        <Link to="/RSVP">RSVP</Link>
+                    </li>
+                </ul>
+            </nav> */}
+            {/*Implementing Routes for respective Path */}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/RSVP" element={<RSVP />}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
