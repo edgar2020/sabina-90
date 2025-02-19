@@ -1,6 +1,7 @@
 // src/App.js
 import React from "react";
 import Form from "./components/Form"
+import Admin from "./components/Admin"
 import SaveTheDate from "./components/SaveTheDate"
 
 
@@ -8,21 +9,14 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    // Link,
-    // useNavigate,
-    // Outlet,
 } from "react-router-dom";
 
 
 // Save the Date Page Component
 const Home = () => {
-    // const navigate = useNavigate();
-
     return (
         <div className="SaveTheDateOuterDiv">
             <SaveTheDate/>
-            {/* <button onClick={() =>
-                 navigate("/contact")}>Go to Contact</button> */}
         </div>
     );
 };
@@ -31,25 +25,16 @@ const Home = () => {
 const RSVP = () => (
     <div>
         <h2>RSVP</h2>
-        {/* <nav>
-            <ul>
-                <li>
-                    <Link to="team">Our Team</Link>
-                </li>
-                <li>
-                    <Link to="company">Our Company</Link>
-                </li>
-            </ul>
-        </nav>
-        <Outlet /> */}
         <Form/>
     </div>
 );
-
-// Components for other pages
-// const Contact = () => <h2>Contact Page</h2>;
-// const Team = () => <h2>Team Page</h2>;
-// const Company = () => <h2>Company Page</h2>;
+// Admin Page Component 
+const AdminPage = () => (
+    <div>
+        <h2>Submitions</h2>
+        <Admin/>
+    </div>
+);
 
 function App() {
     return (
@@ -65,6 +50,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/RSVP" element={<RSVP />}/>
+                <Route path="/admin" element={<AdminPage />}/>
             </Routes>
         </Router>
     );
