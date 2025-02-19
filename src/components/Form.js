@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import GuestInfo from './GuestInfo'
 import Confirm from './Confirm'
 
-import { db } from '../firebase'; // adjust path to your actual file
+// import { db } from '../firebase'; // adjust path to your actual file
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -25,14 +25,6 @@ function Form() {
     isAttending: 2,
     numberOfGuests: '-',
   })
-
-   // Validation state to hold error messages
-  //  const [errors, setErrors] = useState({
-  //   isAttending: "", // Error for the attending radio button
-  //   firstName: "",// Error for firstnames
-  //   lastName: "",// Error for last names
-  //   numberOfGuests: "",// Missing number of guests
-  // });
 
   // Function to handle form submission
   const handleNext = () => {
@@ -81,6 +73,7 @@ function Form() {
         try {
           const docRef = await addDoc(collection(db, "responses"), guestResponse);
           sendSuccess('Success! Your action was completed.');
+          console.log(docRef)
           setDone(true);
         } catch (error) {
           sendError("There was an error");

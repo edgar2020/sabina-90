@@ -39,14 +39,6 @@ const AdminPage = () => (
 function App() {
     return (
         <Router>
-            {/* <nav>
-                <ul>
-                    <li>
-                        <Link to="/RSVP">RSVP</Link>
-                    </li>
-                </ul>
-            </nav> */}
-            {/*Implementing Routes for respective Path */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/RSVP" element={<RSVP />}/>
