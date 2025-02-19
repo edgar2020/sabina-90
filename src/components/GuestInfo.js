@@ -12,7 +12,8 @@ function GuestInfo({formData, setFormData}) {
       if(formData.isAttending === 1) {
         return <div className='form-input' id='input-numberOfGuests'>
           <p className='form-label'>How many individuals will be joining us?</p>
-          <select id="input-numberOfGuests" name="numberOfGuests">
+          <select  value={formData.numberOfGuests} id="input-numberOfGuests" name="numberOfGuests" onChange={(event) => setFormData({...formData, numberOfGuests: event.target.value})}>
+          {/* <select id="input-numberOfGuests" name="numberOfGuests" onChange={(event) => alert(event.target.value)}> */}
             <option value="-">-</option>
             <option value="1">1</option>
             <option value="2">2</option>

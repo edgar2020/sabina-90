@@ -15,7 +15,7 @@ function Form() {
     firstName: "",
     lastName: "",
     isAttending: 2,
-    numberOfGuests: 0,
+    numberOfGuests: '-',
   })
 
    // Validation state to hold error messages
@@ -23,6 +23,7 @@ function Form() {
     isAttending: "", // Error for the attending radio button
     firstName: "",// Error for firstnames
     lastName: "",// Error for last names
+    numberOfGuests: "",// Missing number of guests
   });
 
   // Function to handle form submission
@@ -46,6 +47,13 @@ function Form() {
         foundErrors = true;
       } else {
         formErrors.isAttending = ''; // Clear any previous errors
+      }
+
+      if (formData.isAttending === 1 && formData.numberOfGuests === '-') {
+        formErrors.numberOfGuests = 'Please select number of guests who will be attending';
+        foundErrors = true;
+      } else {
+        formErrors.numberOfGuests = ''; // Clear any previous errors
       }
       
       // Validate that the first name is not empty
@@ -79,9 +87,20 @@ function Form() {
     }
     else
     {
-      return <Confirm/>
+      return <Confirm formData={formData}/>
     }
   }
+
+  const nextorSubmit = () =>
+    {
+      if(page === 0) {
+        return <button className='FormNext'  onClick={() => {handleNext()}}>Next</button>
+      }
+      else
+      {
+        return <button className='FormSubmit'  onClick={() => {handleNext()}}>Submit</button>
+      }
+    }
 
   return (
     <div className='Form'>
@@ -97,10 +116,11 @@ function Form() {
               {errors.firstName && <p style={{ color: 'red' }}>{errors.firstName}</p>}
               {errors.lastName && <p style={{ color: 'red' }}>{errors.lastName}</p>}
               {errors.isAttending && <p style={{ color: 'red' }}>{errors.isAttending}</p>}
+              {errors.numberOfGuests && <p style={{ color: 'red' }}>{errors.numberOfGuests}</p>}
             </div>
             <div className='FormFooter'>
                 <button className='FormPrev' disabled={page === 0} onClick={() => {setPage((curPage) => curPage-1);}}>Previous</button>
-                <button className='FormNext' disabled={page === FormTitles.length-1} onClick={() => {handleNext()}}>Next</button>
+                {nextorSubmit()}
             </div>
         </div>
     </div>
