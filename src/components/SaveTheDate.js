@@ -24,6 +24,7 @@ function SaveTheDate() {
             <h2 className='geist-mono-500 old-text celebrarText'>ESTAREMOS CELEBRANDO EL 90<sup className='th-tag'>th</sup> CUMPLEÑOS DE LA SEÑORA</h2>
             <h2 className='arbutus-font old-text gwendolyn-bold name'>Sabina Lomelí</h2>
             <h2 className='geist-mono-500 old-text fechaText'>LUNES, 28 DE JULIO, 2025, EN NOCHISTLÁN ZACATECAS</h2>
+            <button className='RSVPbutton'>Confirmar su Asistencia</button>
             <img className="overlay" src={StainedPaper} alt=''/>
             
         </div>

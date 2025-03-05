@@ -1,7 +1,8 @@
 
 html
 {
-  /* background-color: rgb(255, 237, 178); */
+  background-color: rgb(255, 237, 178);
+
 }
 
 #root
@@ -26,6 +27,15 @@ html
   height: 100vh;       
   position: relative;
   /* background-color: rgb(133, 75, 0); */
+  background-color: #181006;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* background-image: url("../images/ofSabina/s11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; */
+    background-image: url("../images/tileable-wood-colored.png");
+    background-attachment: fixed;
+    background-position: center; 
 }
 
 .saveTheDateContainer
@@ -45,6 +55,7 @@ html
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  
 }
 
 
@@ -216,6 +227,14 @@ html
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+.RSVPbutton
+{
+  position: relative;
+  background-color: black;
+  color: var(--paper-color);
+  margin: auto;
+  font-weight: bold;
+}
 
 
 @media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
@@ -223,7 +242,7 @@ html
   .saveTheDateContainer
   {
     width: 310px;
-    height: 436px;
+    height: 486px;
     margin-top: 15px;
   }
 
@@ -270,7 +289,7 @@ html
   {
     font-size: 11px; 
     letter-spacing: -1px;
-    bottom: 67px;
+    bottom: 117px;
     width: 100%;
   }
   
@@ -292,7 +311,7 @@ html
   .name
   {
     font-size:55px;
-    bottom: 20px;
+    bottom: 70px;
   }
   
   .fechaText
@@ -300,9 +319,15 @@ html
     letter-spacing: -1px;
     font-size: 11px;
     position: absolute; 
-    margin-bottom: 1px;
+    bottom: 45px;
   
   }  
+  .RSVPbutton
+  {
+    font-size: 20px;
+    margin-top: 90px;
+    padding: 5px;
+  }
   
 }
 

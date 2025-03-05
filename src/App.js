@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/App.js
 import React, { useRef } from "react";
 import Form from "./components/Form"
@@ -57,8 +58,8 @@ function App() {
     // RSVP Page Component 
     const RSVP = () => (
         <div className="rsvpPagecontainer">
-            <Invitation  onButtonClick={scrollToForm} />
-            <ImageCarousel images={imageURLs} />
+            {/* <Invitation  onButtonClick={scrollToForm} /> */}
+            {/* <ImageCarousel images={imageURLs} /> */}
             <Form ref={formRef} />
         </div>
     );

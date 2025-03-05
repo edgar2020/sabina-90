@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import StainedPaper from '../images/stained-old-paper-texture-130.jpg'
 function Invitation({ onButtonClick }) {
