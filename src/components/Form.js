@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef } from 'react'
 import GuestInfo from './GuestInfo'
 import Confirm from './Confirm'
+import { db } from '../firebase'; // adjust path to your actual file
+// images
 
-// import { db } from '../firebase'; // adjust path to your actual file
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
-function Form() {
+function Form({ref}) {
+  // for linking to
 
   // will controll which page of the form user is currently at
   const [page, setPage] = useState(0);
@@ -38,12 +40,12 @@ function Form() {
 
   const sendSuccess = async (msg) => {
     toast.success('Success! Your action was completed.', {
-      position: 'top-center', // Customize position
+      position: 'top-right', // Customize position
       autoClose: 3000,                    // Auto-close after 3 seconds
       hideProgressBar: false,             // Show or hide progress bar
       closeOnClick: true,                 // Close on click
       pauseOnHover: true,                 // Pause on hover
-      draggable: true,                   // Make it draggable
+      draggable: false,                   // Make it draggable
       progress: undefined,               // Progress bar value (if any)
     });
   }
@@ -81,7 +83,16 @@ function Form() {
     }
 
     // Validation function
-    const sendError = async (err) => toast.error(err);
+    const sendError = async (err) => toast.error(err, {
+      position: 'top-right', // Customize position
+      autoClose: 2000,                    // Auto-close after 3 seconds
+      hideProgressBar: false,             // Show or hide progress bar
+      closeOnClick: true,                 // Close on click
+      pauseOnHover: true,                 // Pause on hover
+      draggable: false,                   // Make it draggable
+      progress: undefined,               // Progress bar value (if any)
+    });
+  
     
     const validateInputs = () => {
       // let formErrors = { ...errors };
@@ -133,7 +144,7 @@ function Form() {
     if(!isDone) {
       // when form is not considered done
       return (
-      <div className='Form'>
+      <div className='Form' ref={ref}>
         <div className='FormContainer'>
           <div className='FormHeader'>
             <h1 className='FormHeaderTitle'>{FormTitles[page]}</h1>
@@ -142,7 +153,7 @@ function Form() {
             {PageDisplay()}
           </div>
           <div className='FormFooter'>
-              <button className='FormPrev' disabled={page === 0} onClick={() => {setPage((curPage) => curPage-1);}}>Previous</button>
+              {showPrev()}
               {nextorSubmit()}
           </div>
         </div>
@@ -166,12 +177,26 @@ function Form() {
         return <button className='FormSubmit'  onClick={(event) => {handleSubmit(event)}}>Submit</button>
       }
     }
+  const showPrev = () =>
+    {
+      if(page > 0) {
+        return <button className='FormPrev' onClick={() => {setPage((curPage) => curPage-1);}}>Previous</button>
+      }
+      else
+      {
+        return (<></>)
+      }
+    }
+
+
+
+
 
   return (
     <>
-      {RSVP_stage()}
-      
       <ToastContainer />
+      {RSVP_stage()}
+      {/* {RSVP_stage()} */}
     </>
 )}
 

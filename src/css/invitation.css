@@ -1,0 +1,35 @@
+.invitation
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #181006;
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* background-image: url("../images/ofSabina/s11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; */
+    background-image: url("../images/tileable-wood-colored.png");
+    background-attachment: fixed;
+    background-position: center; 
+    text-align: center;
+}
+
+.invitation-container
+{
+    padding: 0 20px;
+    background-color: rgb(255, 238, 221);
+    border-radius: 5px;
+    left: 50%;
+    height: 100%;
+    /* top: 50%; */
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: 310px;
+    position: fixed;
+}
+.invitation-preheader
+{
+    margin-top: 0;
+}
+
+

@@ -1,0 +1,17 @@
+.Form
+{
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: relative;
+}
+
+.FormContainer
+{
+    z-index: 102;
+    margin: 0 auto;
+    background-color: rgb(238, 255, 0);
+    width: fit-content;
+    padding: 40px 50px;
+}
