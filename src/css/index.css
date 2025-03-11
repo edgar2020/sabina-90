@@ -1,8 +1,18 @@
-
-html
-{
-  background-color: rgb(255, 237, 178);
-
+html {
+  --s: 37px; /* control the size*/
+  --c1: #994848;
+  --c2: #d9d9d9;
+  
+  --c:#0000,var(--c1) .5deg 119.5deg,#0000 120deg;
+  --g1:conic-gradient(from  60deg at 56.25% calc(425%/6),var(--c));
+  --g2:conic-gradient(from 180deg at 43.75% calc(425%/6),var(--c));
+  --g3:conic-gradient(from -60deg at 50%   calc(175%/12),var(--c));
+  background:
+    var(--g1),var(--g1) var(--s) calc(1.73*var(--s)),
+    var(--g2),var(--g2) var(--s) calc(1.73*var(--s)),
+    var(--g3) var(--s) 0,var(--g3) 0 calc(1.73*var(--s)) 
+    var(--c2);
+  background-size: calc(2*var(--s)) calc(3.46*var(--s));
 }
 
 #root
@@ -27,15 +37,15 @@ html
   height: 100vh;       
   position: relative;
   /* background-color: rgb(133, 75, 0); */
-  background-color: #181006;
+  /* background-color: #181006; */
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     /* background-image: url("../images/ofSabina/s11.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top; */
-    background-image: url("../images/tileable-wood-colored.png");
+    /* background-image: url("../images/tileable-wood-colored.png");
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;  */
 }
 
 .saveTheDateContainer
@@ -110,7 +120,7 @@ html
   text-align: center; /* Optional: centers the text */
   font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
   font-size: 3vh; /* This is a fallback for older browsers */
-  margin-bottom: 0;
+  margin-bottom: 4vh;
   width: fit-content;
 }
 .old-text
@@ -142,7 +152,7 @@ html
 {
   width: 10vh;
   transform: rotate(-10deg);
-  margin-top: 5vh;
+  margin-top: 4vh;
   position: relative;
 }
 
@@ -156,7 +166,7 @@ html
   letter-spacing: -0.15vh;
   margin-bottom: 0;
   position: absolute;
-  bottom: 14vh;
+  bottom: 19vh;
   width: 100%;
 }
 
@@ -168,7 +178,7 @@ html
 {
   margin-left: 0 auto;
   height: 34vh;
-  margin-top: -2.4vh;
+  margin-top: -4vh;
   -webkit-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
@@ -189,7 +199,7 @@ html
   line-height: 0.8;
   margin-bottom: 0;
   position: absolute;
-  bottom: 5vh;
+  bottom: 11vh;
   width: 100%;
   text-align: center;
 }
@@ -197,7 +207,7 @@ html
 .fechaText
 {
   position: absolute;
-  bottom: 0;
+  bottom: 6vh;
   width: 100%;
   text-align: center;
   letter-spacing: -0.15vh;
@@ -230,10 +240,21 @@ html
 .RSVPbutton
 {
   position: relative;
-  background-color: black;
+  background-color: rgb(31, 12, 0);
   color: var(--paper-color);
   margin: auto;
   font-weight: bold;
+  border-radius: 5px;
+  top: 16vh;
+  z-index: 23;
+  padding: 1.5vh;
+  font-size: 2.6vh;
+  border: 2px ghostwhite inset
+}
+
+.RSVPbutton:hover
+{
+  border:outset
 }
 
 
@@ -300,7 +321,7 @@ html
   .calendar
   {
     height: 170px;
-    margin-top: -10px;
+    /* margin-top: -10px; */
   }
   
   .calendarContainer
@@ -324,8 +345,9 @@ html
   }  
   .RSVPbutton
   {
+    position: inherit;
     font-size: 20px;
-    margin-top: 90px;
+    margin-top: 85px;
     padding: 5px;
   }
   

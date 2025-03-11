@@ -14,7 +14,7 @@ function Invitation({ onButtonClick }) {
             <h3 className='invitation-este'>este</h3>
             <h2 className='invitation-date'>28 de Julio, 2025</h2>
             <h2 className='invitation-location'>En el Salon Las Palmas De Nochistalon Zac.</h2>
-            <button className='RSVP-button' onClick={onButtonClick}>Confirmar su Asistencia</button>
+            <button className='RSVP-button ' onClick={onButtonClick}>Confirmar su Asistencia</button>
         </div>
     </div>
   )

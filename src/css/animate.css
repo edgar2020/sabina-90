@@ -1,8 +1,21 @@
-.sway {
+/* .sway {
     animation: sway 7s infinite;
-    /* transform-origin: 50% 100% 0; */
-}
+    transform-origin: 50% 100% 0; 
+} */
 @keyframes sway {
     0%, 100%{ transform: rotate(-2deg);}
     50%{ transform: rotate(2deg); }
 }
+
+.shimmer {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    mask: linear-gradient(-60deg, #000 30%, #000A, #000 70%) right/350% 100%;
+    animation: shimmer 2.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      mask-position: left
+    }
+  }
