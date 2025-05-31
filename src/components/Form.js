@@ -157,7 +157,7 @@ function Form({ref}) {
                 Le pedimos que por favor complete la siguiente información para 
                 saber si podemos contar con tu presencia el <strong>28 de Julio, 
                   2025</strong> en el <strong>Salon Las Palmas:</strong></p>
-            <br></br>
+            <br className='br-divider'></br>
             <p className='FormHeaderParagraph'>
                 Sabina agradece a Dios poder celbrar la vida junto con sus familiares y amigos. Su presencia es lo unico que ella necesita, pero si insiste en obsquiarle algo, les invita a donar la caridad de su eleccion. Gracias</p>
             
