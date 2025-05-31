@@ -2,6 +2,8 @@
 import React, { useState, forwardRef } from 'react'
 import GuestInfo from './GuestInfo'
 import Confirm from './Confirm'
+
+import StainedPaper from '../images/stained-old-paper-texture-130.jpg'
 import { db } from '../firebase'; // adjust path to your actual file
 // images
 
@@ -20,7 +22,7 @@ function Form({ref}) {
   const [isDone, setDone] = useState(false)
   
   // will give header of each page
-  const FormTitles = ["Primary Guest", "Confirmation"]
+  const FormTitles = ["ESTAN INVITADOS", "Confirmación"]
   // will save user's input
   const [formData, setFormData] = useState({
     firstName: "",
@@ -40,7 +42,7 @@ function Form({ref}) {
 
 
   const sendSuccess = async (msg) => {
-    toast.success('Success! Your action was completed.', {
+    toast.success('¡Éxito! Tu acción se completó.', {
       position: 'top-right', // Customize position
       autoClose: 3000,                    // Auto-close after 3 seconds
       hideProgressBar: false,             // Show or hide progress bar
@@ -75,11 +77,11 @@ function Form({ref}) {
 
         try {
           const docRef = await addDoc(collection(db, "responses"), guestResponse);
-          sendSuccess('Success! Your action was completed.');
+          sendSuccess('¡Éxito! Tu acción se completó.');
           console.log(docRef)
           setDone(true);
         } catch (error) {
-          sendError("There was an error");
+          sendError("Hubo un error");
         }
     }
 
@@ -102,24 +104,24 @@ function Form({ref}) {
       // Validate that the first name is not empty
       if (formData.firstName.trim() === '') {
         foundErrors = true;
-        sendError('First Name is required.');
+        sendError('El nombre es obligatorio.');
       } 
       
       // Validate that the last name is not empty
       if (formData.lastName.trim() === '') {
-        sendError('Last Name is required.');
+        sendError('El apellido es obligatorio.');
         foundErrors = true;
       } 
 
       if (formData.isAttending !== 0 && formData.isAttending !== 1) {
         // formErrors.isAttending = 'Please select an attendance option.';
-        sendError('Please select an attendance option.');
+        sendError('Por favor seleccione una opción de asistencia.');
         foundErrors = true;
       } 
       
       // Validate how many people are attending
       if (formData.isAttending === 1 && formData.numberOfGuests === '-') {
-        sendError('Please select number of guests who will be attending')
+        sendError('Por favor seleccione el número de invitados que asistirán')
         foundErrors = true;
       }
       
@@ -149,6 +151,16 @@ function Form({ref}) {
         <div className='FormContainer'>
           <div className='FormHeader'>
             <h1 className='FormHeaderTitle'>{FormTitles[page]}</h1>
+            <h2 className='FormHeadersubheader gwendolyn-bold' >a la fiesta de 90 años de</h2>
+            <h1 className='ForHeaderName gwendolyn-bold'>Sabina Lomelí</h1>
+            <p className='FormHeaderParagraph'>
+                Le pedimos que por favor complete la siguiente información para 
+                saber si podemos contar con tu presencia el <strong>28 de Julio, 
+                  2025</strong> en el <strong>Salon Las Palmas:</strong></p>
+            <br></br>
+            <p className='FormHeaderParagraph'>
+                Sabina agradece a Dios poder celbrar la vida junto con sus familiares y amigos. Su presencia es lo unico que ella necesita, pero si insiste en obsquiarle algo, les invita a donar la caridad de su eleccion. Gracias</p>
+            
           </div>
           <div className='FormBody'>
             {PageDisplay()}
@@ -157,13 +169,15 @@ function Form({ref}) {
               {showPrev()}
               {nextorSubmit()}
           </div>
+          <img className="overlay" src={StainedPaper} alt=''/>
         </div>
+        
       </div>
     )}
     else
     {
       // when form is successfuly submited 
-      return <>asdfsadf</>
+      return <></>
       
     }
   }
@@ -171,17 +185,17 @@ function Form({ref}) {
   const nextorSubmit = () =>
     {
       if(page === 0) {
-        return <button className='FormNext'  onClick={() => {handleNext()}}>Next</button>
+        return <button className='FormNext formNavButton'  onClick={() => {handleNext()}}>Continuar</button>
       }
       else
       {
-        return <button className='FormSubmit'  onClick={(event) => {handleSubmit(event)}}>Submit</button>
+        return <button className='FormSubmit formNavButton'  onClick={(event) => {handleSubmit(event)}}>Entregar</button>
       }
     }
   const showPrev = () =>
     {
       if(page > 0) {
-        return <button className='FormPrev' onClick={() => {setPage((curPage) => curPage-1);}}>Previous</button>
+        return <button className='FormPrev formNavButton' onClick={() => {setPage((curPage) => curPage-1);}}>Volver</button>
       }
       else
       {

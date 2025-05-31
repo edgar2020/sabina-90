@@ -13,6 +13,7 @@ html {
     var(--g3) var(--s) 0,var(--g3) 0 calc(1.73*var(--s)) 
     var(--c2);
   background-size: calc(2*var(--s)) calc(3.46*var(--s));
+/* background-color: var(--c1); */
 }
 
 #root
@@ -235,19 +236,20 @@ html {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+  z-index: 0;
   -ms-user-select: none;
 }
 .RSVPbutton
 {
   position: relative;
-  background-color: rgb(31, 12, 0);
+  background-color: rgb(0, 0, 0);
   color: var(--paper-color);
   margin: auto;
   font-weight: bold;
   border-radius: 5px;
-  top: 16vh;
-  z-index: 23;
-  padding: 1.5vh;
+  top: 16.5vh;
+  z-index: 1;
+  padding: 1.2vh;
   font-size: 2.6vh;
   border: 2px ghostwhite inset
 }
@@ -257,7 +259,7 @@ html {
   border:outset
 }
 
-
+/* 
 @media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
 
   .saveTheDateContainer
@@ -280,17 +282,17 @@ html {
   }
   .contentSubHeader
   {  
-    font-size: 39px; /* This is a fallback for older browsers */
+    font-size: 39px; 
     margin-top: -10px;
   }
   .reserveHeader
   {  
-    font-size: 22px; /* This is a fallback for older browsers */
+    font-size: 22px;
   }
   .reserveTheDate 
   { 
     margin-top: 0;
-    font-size: 18px; /* This is a fallback for older browsers */
+    font-size: 18px; 
   }
   
   .titleInsideCalendarContainer
@@ -321,7 +323,6 @@ html {
   .calendar
   {
     height: 170px;
-    /* margin-top: -10px; */
   }
   
   .calendarContainer
@@ -345,11 +346,14 @@ html {
   }  
   .RSVPbutton
   {
-    position: inherit;
-    font-size: 20px;
-    margin-top: 85px;
-    padding: 5px;
+    border-radius: 5px;
+    top: 87px;
+    border: 2px ghostwhite inset;
+    position: relative;
+    font-size: 16px;
+    padding: 6px;
+    z-index: 1;
   }
   
 }
-
+ */

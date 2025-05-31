@@ -1,7 +1,7 @@
 
 .Form
 {
-    background-color: rgb(255, 223, 180);
+    background-color: rgb(255, 250, 243);
     width: 100%;
     top:0;
     height: 100%;
@@ -15,8 +15,185 @@
     z-index: 102;
     height: 100%;
     margin: 0 auto;
-    margin-top: -21px;
-    /* background-color: rgb(255, 255, 255); */
-    width: fit-content;
-    padding: 0px 50px;
+    /* background-color: rgb(0, 255, 255); */
+    width: 100%;
 }
+.FormHeader
+{
+    /* background-color: darkblue; */
+    padding-bottom: 5px;
+    border-bottom: 3px double black;
+}
+.FormContainer
+{
+    width: 100%;
+    margin: 0;
+    top:0;
+    /* background-color: yellow; */
+    padding: 0;
+}
+
+.FormHeaderTitle
+{
+    /* background-color: red; */
+    margin: 0;
+    padding-top: 4px;
+    width: 100%;
+    font-size:9vh;
+    line-height: 0.9;
+}
+.FormHeadersubheader
+{
+    padding: 0px;
+    margin: 0;
+    /* margin-top: -20px; */
+    font-size: 4vh;
+}
+.ForHeaderName
+{
+    /* margin-top: -30px; */
+    margin: 0;
+    margin-top: -2vh;
+    /* line-height: 0.7; */
+
+    /* background-color: darkblue; */
+    padding: 0;
+    font-size: 10vh;
+    font-weight: bold;
+}
+.FormHeaderParagraph
+{
+    padding: 0 2vh;
+    margin: 0;
+    font-size: 2.4vh;
+    /* margin-top:-30px; */
+}
+.FormBody
+{
+    position: relative;
+    z-index: 1;
+    padding: 2vh;
+    /* background-color: cadetblue; */
+    height: 50%;
+}
+.form-input-row
+{
+    display: inline-flex;
+    /* justify-content: center; */
+    /* background-color: honeydew; */
+    width: 100%;
+}
+.form-input-row-2
+{
+    display: inline-flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* background-color: honeydew; */
+    width: 100%;
+    
+}
+.form-radio-row
+{
+    font-size: 2vh;
+    /* display: inline-flex; */
+    /* justify-content: center; */
+    /* background-color: rgb(82, 221, 82); */
+    width: 20vh;
+    padding-top: 1.5vh;
+}
+.form-input-box
+{
+    margin: 0;
+    margin-left: 2vh;
+    /* background-color: rgb(21, 255, 0); */
+    width: 45%;
+    /* text-align: left; */
+}
+.form-input
+{
+    font-size: 2vh;
+    width: 95%;
+    border: none;
+    background: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.form-label
+{
+    margin: 0;
+    
+    padding-top: 1.4vh;
+    /* background-color: yellow; */
+    font-size: 2vh;
+    text-align: left;
+    width: 100%;
+}
+.form-label-2
+{
+    font-size: 2vh;
+    margin: 0;
+    margin-left: 1vh;
+    padding-top: 2vh;
+    /* background-color: yellow; */
+    text-align: left;
+    /* width: 70%; */
+}
+#input-numberOfGuests
+{
+    display: inline-flex;
+    width: 100%;
+    /* background-color: dodgerblue; */
+    
+}
+#input-numberOfGuests-select
+{
+    font-size: 2vh;
+    width: 15vh;
+    height: 2.6vh;
+    margin-top: 1.5vh;
+    margin-left: 1vh;
+    /* height: 3vh; */
+    /* background-color: darkblue; */
+    /* padding-top: 1.5vh; */
+    /* background-color: rgb(101, 122, 143); */
+    
+    background: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.FormFooter
+{
+    /* background-color: brown; */
+    position: absolute;
+    width: 100%;
+    padding: 5px 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.formNavButton
+{
+  /* position: relative; */
+  background-color: rgb(0, 0, 0);
+  color: var(--paper-color);
+  margin: auto;
+  font-weight: bold;
+  border-radius: 5px;
+  top: 16.5vh;
+  z-index: 1;
+  padding: 1.2vh;
+  font-size: 2.6vh;
+  border: 2px ghostwhite inset
+}
+
+.confirmation-paragraphs
+{
+    font-size: 2.3vh;
+}
+
+.RSVPbutton:hover
+{
+  border:outset
+}
+/* @media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
+{
+    \
+} */

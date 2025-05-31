@@ -6,21 +6,21 @@ function Confirm({formData}) {
   const printStatus = () =>
     {
       if(formData.isAttending === 0) {
-        return <p>You are unable to attend</p>
+        return <p className='confirmation-paragraphs'>No nos vas acompañar</p>
       }
       else if(formData.isAttending === 1 && formData.numberOfGuests === '1') {
-        return <p>Just 1 person will be joining us</p>
+        return <p className='confirmation-paragraphs'>Solo nos acompañará 1 persona</p>
       }
       else {
-        return <p>{formData.numberOfGuests} people will be joining us.</p>
+        return <p className='confirmation-paragraphs'>Nos acompañarán {formData.numberOfGuests} personas.</p>
       }
     }
 
   return (
     <div className='confirmation Page'>
-      <h2>Is the following correct?</h2>
-      <p>First name {formData.firstName}</p>
-      <p>Last name {formData.lastName}</p>
+      <h2 className='confirmation-header'>¿Lo siguiente esta correcto?</h2>
+      <p className='confirmation-paragraphs'>Nombre: {formData.firstName}</p>
+      <p className='confirmation-paragraphs'>Apellido: {formData.lastName}</p>
       {printStatus()}
   
 
