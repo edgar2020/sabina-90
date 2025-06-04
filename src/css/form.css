@@ -198,6 +198,8 @@
     \
 } */
 
+/* Portrait */
+
 @media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
 
 
@@ -224,7 +226,7 @@
 .FormHeaderParagraph
 {
     padding: 0 15px;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: -5px;
 }
 .FormBody
@@ -234,7 +236,7 @@
 
 .form-radio-row
 {
-    font-size: 15px;
+    font-size: 14px;
     width: 95px;
     padding-top: 5px;
 }
@@ -244,18 +246,18 @@
 }
 .form-input
 {
-    font-size: 15px;
+    font-size: 14px;
     
 }
 .form-label
 {
     padding-top: 0px;
     /* background-color: yellow; */
-    font-size: 15px;
+    font-size: 14px;
 }
 .form-label-2
 {
-    font-size: 15px;
+    font-size: 14px;
     margin-left: 10px;
     padding-top: 10px;
     width:150px;
@@ -273,7 +275,7 @@
 }
 #input-numberOfGuests-select
 {
-    font-size: 15px;
+    font-size: 14px;
     width: 70px;
     height: 25px;
     margin-top: 10px;
@@ -289,17 +291,26 @@
     bottom: 0;
     z-index: 1;
 }
-
+.confirmation_Page
+{
+    /* background-color: darkcyan;
+    position: top; */
+}
+.confirmation-header
+{
+    margin: 0;
+    font-size: 19px;
+}
 .formNavButton
 {
   padding: 4px;
-  font-size: 15px;
+  font-size: 14px;
   border: 2px ghostwhite inset
 }
 
 .confirmation-paragraphs
 {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 

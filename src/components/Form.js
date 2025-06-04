@@ -22,7 +22,7 @@ function Form({ref}) {
   const [isDone, setDone] = useState(false)
   
   // will give header of each page
-  const FormTitles = ["ESTAN INVITADOS", "Confirmación"]
+  const FormTitles = ["ESTAN INVITADOS", "ESTAN INVITADOS"]
   // will save user's input
   const [formData, setFormData] = useState({
     firstName: "",
@@ -158,9 +158,8 @@ function Form({ref}) {
                 saber si podemos contar con tu presencia el <strong>28 de Julio, 
                   2025</strong> en el <strong>Salon Las Palmas:</strong></p>
             <br className='br-divider'></br>
-            <p className='FormHeaderParagraph'>
-                Sabina agradece a Dios poder celbrar la vida junto con sus familiares y amigos. Su presencia es lo unico que ella necesita, pero si insiste en obsquiarle algo, les invita a donar la caridad de su eleccion. Gracias</p>
-            
+                
+  
           </div>
           <div className='FormBody'>
             {PageDisplay()}

@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Form from "./components/Form"
 import Admin from "./components/Admin"
 import SaveTheDate from "./components/SaveTheDate"
+import Header from "./components/Header"
 
 import ImageCarousel from './components/ImageCarousel'; // Import the component
 import Invitation from './components/Invitation'; // Import the component
@@ -45,8 +46,24 @@ function App() {
     // Save the Date Page Component
     const Home = () => {
         return (
-            <div className="SaveTheDateOuterDiv">
-                <SaveTheDate/>
+            <div className="header_and_courasel">
+                <Header/>
+                <div className="home_header">
+                    <ImageCarousel images={imageURLs} /> 
+                </div>
+                <div className="donation_paragraph_container">
+                    <p className="donation_paragraph">Sabina agradece a Dios poder celbrar la vida junto con sus familiares y amigos. Su presencia es lo unico que ella necesita, pero si insiste en obsquiarle algo, les invita a donar la caridad de su eleccion. Gracias</p>
+                    <div className="donation_paragraph_inner_container">
+                        <p className="donation_paragraph_strong"><strong>Ubicación</strong></p>
+                        <p className="donation_paragraph_inner">Salon Las Palmas</p>
+                        <p className="donation_paragraph_inner">Calle Cristobal Colon #66</p>
+                        <p className="donation_paragraph_strong"><strong>Fecha</strong></p>
+                        <p className="donation_paragraph_inner">28 de Julio, 2025</p>
+                    </div>
+                </div>
+                <div className="SaveTheDateOuterDiv">
+                    <SaveTheDate/>
+                </div>
             </div>
         );
     };
@@ -58,8 +75,6 @@ function App() {
     // RSVP Page Component 
     const RSVP = () => (
         <div className="rsvpPagecontainer">
-            {/* <Invitation  onButtonClick={scrollToForm} /> */}
-            {/* <ImageCarousel images={imageURLs} /> */}
             <Form ref={formRef} />
         </div>
     );

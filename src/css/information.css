@@ -1,0 +1,46 @@
+.header_and_courasel
+{
+  width: 100vw;
+}
+.donation_paragraph_container
+{
+  background-color: var(--header-background-color);
+  border-bottom: 10px double var(--header-color);
+  border-top: 10px double var(--header-color);
+  padding: 10px 10vh;
+  font-size: 3vh;
+  text-align: center;
+}
+.donation_paragraph_inner_container
+{
+    /* background-color: darkblue; */
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+}
+.donation_paragraph_inner
+{
+    margin: 0;
+}
+
+.donation_paragraph_strong
+{
+    font-size: 3.1vh;
+    margin-bottom: 0;
+}
+.home_header
+{
+  width: 100vw;
+  height: 75vh;
+  background-color: rgb(216, 216, 216);
+}
+
+.donation_paragraph_container
+{
+  background-color: var(--header-background-color);
+  border-bottom: 10px double var(--header-color);
+  border-top: 10px double var(--header-color);
+  padding: 10px 10vh;
+  font-size: 3vh;
+  text-align: center;
+}

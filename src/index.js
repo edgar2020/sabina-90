@@ -5,6 +5,7 @@ import './css/animate.css';
 import './css/fonts.css';
 import './css/form.css';
 import './css/invitation.css';
+import './css/information.css';
 import './css/imageCarousel.css';
 
 import App from './App';
