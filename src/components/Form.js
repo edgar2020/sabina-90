@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
-function Form({ref}) {
+function Form({ onClose }) {
   // for linking to
 
   // will controll which page of the form user is currently at
@@ -80,6 +80,8 @@ function Form({ref}) {
           sendSuccess('¡Éxito! Tu acción se completó.');
           console.log(docRef)
           setDone(true);
+          // onClose()
+          
         } catch (error) {
           sendError("Hubo un error");
         }
@@ -147,7 +149,7 @@ function Form({ref}) {
     if(!isDone) {
       // when form is not considered done
       return (
-      <div className='Form' ref={ref}>
+      <div className='Form'>
         <div className='FormContainer'>
           <div className='FormHeader'>
             <h1 className='FormHeaderTitle'>{FormTitles[page]}</h1>
@@ -157,7 +159,7 @@ function Form({ref}) {
                 Le pedimos que por favor complete la siguiente información para 
                 saber si podemos contar con tu presencia el <strong>28 de Julio, 
                   2025</strong> en el <strong>Salon Las Palmas:</strong></p>
-            <br className='br-divider'></br>
+            {/* <br className='br-divider'></br> */}
                 
   
           </div>
@@ -168,15 +170,22 @@ function Form({ref}) {
               {showPrev()}
               {nextorSubmit()}
           </div>
-          <img className="overlay" src={StainedPaper} alt=''/>
         </div>
-        
+          <img className="overlay" src={StainedPaper} alt=''/>
       </div>
     )}
     else
     {
       // when form is successfuly submited 
-      return <></>
+      return (
+        <div className='Form'>
+          <div className='thankyou_for_rsvping old-text'>
+            <h2 className='thankyou_for_rsvping_h2 geist-mono-900 '>Gracias por confirmar su asistencia.</h2>
+            <h3 className='thankyou_for_rsvping_h3'> Puede salir del formulario. </h3>
+          </div>
+            <img className="overlay" src={StainedPaper} alt=''/>
+      </div>
+      )
       
     }
   }

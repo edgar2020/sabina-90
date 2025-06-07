@@ -1,15 +1,22 @@
 .header_and_courasel
 {
   width: 100vw;
+  
+}
+.donation_paragraph
+{
+    margin: 20px auto auto auto;
+    width: 75%;
 }
 .donation_paragraph_container
 {
-  background-color: var(--header-background-color);
-  border-bottom: 10px double var(--header-color);
+  /* background-color: var(--header-background-color); */
+  /* border-bottom: 10px double var(--header-color); */
   border-top: 10px double var(--header-color);
   padding: 10px 10vh;
-  font-size: 3vh;
+  font-size: 3.5vh;
   text-align: center;
+  padding-bottom: 50px;
 }
 .donation_paragraph_inner_container
 {
@@ -17,6 +24,7 @@
     width: fit-content;
     margin: 0 auto;
     text-align: left;
+    font-size: 3.3vh;
 }
 .donation_paragraph_inner
 {
@@ -38,9 +46,9 @@
 .donation_paragraph_container
 {
   background-color: var(--header-background-color);
-  border-bottom: 10px double var(--header-color);
+  /* border-bottom: 10px double var(--header-color); */
   border-top: 10px double var(--header-color);
   padding: 10px 10vh;
-  font-size: 3vh;
+  padding-bottom: 50px;
   text-align: center;
 }
