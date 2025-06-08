@@ -26,6 +26,14 @@ import s14 from './images/ofSabina/s14.jpg'
 import s15 from './images/ofSabina/s15.jpg'
 import s16 from './images/ofSabina/s16.jpg'
 import s17 from './images/ofSabina/s17.jpg'
+import s18 from './images/ofSabina/photo1.png'
+import s19 from './images/ofSabina/photo2.png'
+import s20 from './images/ofSabina/photo3.png'
+import s21 from './images/ofSabina/photo4.png'
+import s22 from './images/ofSabina/photo5.png'
+import s23 from './images/ofSabina/photo6.png'
+import s24 from './images/ofSabina/photo7.png'
+import s25 from './images/ofSabina/photo8.png'
 
 import {
     BrowserRouter as Router,
@@ -85,7 +93,7 @@ function App() {
     };
 
     const imageURLs = [
-        s1,s2,s3,s4,s5,s6,s7,s9,s10,s11,s12,s13,s14,s15,s16,s17
+        s25,s22,s19,s18,s21,s23,s24,s1,s2,s3,s4,s5,s6,s7,s9,s10,s11,s12,s13,s20,s14,s15,s16,s17
     ];
 
     // RSVP Page Component 

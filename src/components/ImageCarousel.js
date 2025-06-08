@@ -26,8 +26,6 @@ const ImageCarousel = ({ images }) => {
 
   return (
     <div className="carousel-container">
-        {/* <button className="above-carousel-button">Confirmar su Asistencia</button> Button above carousel */}
-
         <div className="image-carousel" ref={carouselRef}>
         {images.map((image, index) => (
             <div

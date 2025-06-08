@@ -1,7 +1,6 @@
 .header_and_courasel
 {
-  width: 100%;
-  
+  width: 100vw;
 }
 
 .home_header
@@ -21,7 +20,7 @@
 }
 .main_header_h1
 {
-  padding: 10px;
+  /* padding: 10px; */
   margin: 0;
   font-size: 39px;
   text-align: left;

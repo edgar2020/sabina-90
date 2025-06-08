@@ -21,11 +21,12 @@ html
     padding: 10px;
     margin: auto auto;
     background-color: black;
-    position: absolute;
+    /* position: absolute; */
+
     color: bisque;
-    top: 50%;
+    /* top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 .ExitButton
 {
@@ -37,29 +38,17 @@ html
     z-index: 1245 !important;
     background-color: rgb(139, 0, 0);
 }
-
 .FormContainer
 {
-    /* position: inherit; */
-    z-index: 102;
-    height: 100%;
-    margin: 0 auto;
-    /* background-color: rgb(0, 255, 255); */
     width: 100%;
+    z-index: 102;
+    margin: 0 auto;
 }
 .FormHeader
 {
     /* background-color: darkblue; */
     padding-bottom: 10px;
     border-bottom: 3px double black;
-}
-.FormContainer
-{
-    width: 100%;
-    margin: 0;
-    top:0;
-    /* background-color: yellow; */
-    padding: 0;
 }
 
 .FormHeaderTitle
@@ -99,6 +88,7 @@ html
 {
     position: relative;
     z-index: 1;
+    margin-bottom: 10px;
     height: 150px;
 }
 .form-input-row

@@ -9,16 +9,19 @@ html {
   --paper-color: rgb(255, 250, 243);
   
 /* background-color: var(--c1); */
-background:
+/* background:
     var(--g1),var(--g1) var(--s) calc(1.73*var(--s)),
     var(--g2),var(--g2) var(--s) calc(1.73*var(--s)),
     var(--g3) var(--s) 0,var(--g3) 0 calc(1.73*var(--s)) 
     var(--c2);
-  background-size: calc(2*var(--s)) calc(3.46*var(--s));
+  background-size: calc(2*var(--s)) calc(3.46*var(--s)); */
 /* overflow-x: hidden; */
 
   --header-background-color: whitesmoke;
   --header-color: rgb(170, 156, 119);
+  width: fit-content;
+
+  background-color: whitesmoke;
 }
 
 #root
@@ -27,7 +30,6 @@ background:
   /* background-color: rgb(255, 0, 0); */
   position: absolute;
   top:0;
-
 }
 .saveTheDateOuterOuterContainer
 {
@@ -40,6 +42,7 @@ background:
   background-color: rgba(110, 110, 110, 0.767);
   top: 0;
 }
+
 .saveTheDateOuterContainer
 {
   /* width: 500px; */
@@ -95,7 +98,8 @@ background:
 {
   margin-right: -2.6vh;
   margin-left: -2.6vh;
-} */
+
+max-width: 100%; } */
 /* .mainContentHeader{
   
   text-align: center; 
@@ -105,7 +109,8 @@ background:
   line-height: 0.9;
   margin-top: 0px;
   margin-bottom: 0;
-} */
+
+max-width: 100%; } */
 /* .contentSubHeader{
   
   text-align: center; 
@@ -115,7 +120,8 @@ background:
   line-height: 0.9;
   margin-bottom: 0;
   
-} */
+
+max-width: 100%; } */
 /* .reserveHeader{
   
   text-align: center; 
@@ -125,7 +131,8 @@ background:
   margin-bottom: 0;
   background-color: #000000;
   color: var(--paper-color);
-} */
+
+max-width: 100%; } */
 /* .reserveTheDate {
   
   text-align: center; 
@@ -134,7 +141,8 @@ background:
   margin-bottom: 4vh;
   width: fit-content;
   
-} */
+
+max-width: 100%; } */
 .old-text
 {
   mask-size: contain; 
@@ -152,13 +160,15 @@ background:
   margin: 0 auto;
   margin-left: 13%;
   width: fit-content;
-} */
+
+max-width: 100%; } */
 /* .fingerSpan
 {
   display: inline-block;
   position: relative;
   width: fit-content;
-} */
+
+max-width: 100%; } */
 
 /* .finger
 {
@@ -166,12 +176,14 @@ background:
   transform: rotate(-10deg);
   margin-top: 4vh;
   position: relative;
-}
+
+max-width: 100%; }
 
 .fingerText
 {
   vertical-align: top;
-} */
+
+max-width: 100%; } */
 /* .celebrarText
 {
   font-size: 2.2vh; 
@@ -180,12 +192,14 @@ background:
   position: absolute;
   bottom: 19vh;
   width: 100%;
-} */
+
+max-width: 100%; } */
 
 /* .th-tag
 {
   font-size: 1.2vh;
-} */
+
+max-width: 100%; } */
 /* .calendar
 {
   margin-left: 0 auto;
@@ -194,7 +208,8 @@ background:
   -webkit-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
-} */
+
+max-width: 100%; } */
 
 /* .calendarContainer
 {
@@ -202,7 +217,8 @@ background:
   transform: rotate(-5deg);
   width: 100%;
   height: 40vh;
-} */
+
+max-width: 100%; } */
 
 /* .name
 {
@@ -214,7 +230,8 @@ background:
   bottom: 11vh;
   width: 100%;
   text-align: center;
-} */
+
+max-width: 100%; } */
 
 /* .fechaText
 {
@@ -224,11 +241,13 @@ background:
   text-align: center;
   letter-spacing: -0.15vh;
   font-size: 2.3vh; 
-} */
+
+max-width: 100%; } */
 /* .rsvpPagecontainer
 {
   display: block;
-} */
+
+max-width: 100%; } */
 .overlay
 {
   border-radius: 5px;
@@ -264,19 +283,20 @@ background:
   padding: 1.2vh;
   font-size: 2.6vh;
   border: 2px ghostwhite inset
-} */
+
+max-width: 100%; } */
 
 .RSVPbutton:hover
 {
-  border:outset
+  border:outset;
 }
 .RSVPbutton2:hover
 {
-  border:outset
+  border:outset;
 }
 .RSVPbutton3:hover
 {
-  border:outset
+  border:outset;
 }
 
 .RSVPbutton2
@@ -306,7 +326,11 @@ background:
   border: 2px ghostwhite inset;
   margin: auto 50px auto auto;
   padding: 7px;
-  margin-top: 15px;
+  /* margin: 0 auto ;
+  margin-top: 15px; */
 }
 
-
+* > :not(.carousel-background-slide) {
+  /* /* outline: 1px solid red; */
+  max-width: 100%;
+ }

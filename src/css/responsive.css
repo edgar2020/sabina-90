@@ -1,3 +1,47 @@
+@media (max-width: 600px) {
+    .header_and_courasel
+    {
+        /* width: 100vw; */
+    }
+    .donation_paragraph_inner_container
+    {
+        display: block;
+        padding: 0;
+        margin: 25px 0;
+    }
+    .donation_paragraph_left
+    {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .donation_paragraph_right
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .donation_paragraph_container
+    {
+        width: 100%;
+        padding: 0px;
+    }
+    .donation_paragraph_inner_inner_container
+    {
+        margin: 0;
+        width: 100%;
+    }
+    .donation_paragraph
+    {
+        width: 100%;
+    }
+    .donation_paragraph_strong
+    {
+        width: 100%;
+    }
+    .donation_paragraph_inner
+    {
+        width: 100%;
+    }
+}
 @media (max-width: 450px) {
 
 .FormHeaderTitle
@@ -92,6 +136,7 @@
     width: 100%;
     bottom: 0;
     z-index: 1;
+    
 }
 
 .confirmation-header
@@ -211,11 +256,13 @@
     {
         font-size: 40px;
         /* background-color: darkblue; */
-        max-width: 250px
+        max-width: 250px;
     }
 }
-
+/* 
 @media (max-width: 340px) {
+    .FormBody
+    {}
     .saveTheDateOuterContainer
     {
         width: 100%;
@@ -232,4 +279,4 @@
         margin: 0;
         position: relative;
     }
-}
+} */

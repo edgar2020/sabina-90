@@ -11,7 +11,7 @@ import { db } from '../firebase'; // adjust path to your actual file
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, addDoc, serverTimestamp  } from 'firebase/firestore';
 
 function Form({ onClose }) {
   // for linking to
@@ -29,6 +29,7 @@ function Form({ onClose }) {
     lastName: "",
     isAttending: 2,
     numberOfGuests: '-',
+    time_submited: '',
   })
 
   // Function to handle form submission
@@ -59,6 +60,7 @@ function Form({ onClose }) {
         let guestResponse = {
           firstName: formData.firstName,
           lastName: formData.lastName,
+          time_submited: serverTimestamp(),
         }
         
         if(formData.isAttending === 0)
@@ -183,7 +185,7 @@ function Form({ onClose }) {
             <h2 className='thankyou_for_rsvping_h2 geist-mono-900 '>Gracias por confirmar su asistencia.</h2>
             <h3 className='thankyou_for_rsvping_h3'> Puede salir del formulario. </h3>
           </div>
-            <img className="overlay" src={StainedPaper} alt=''/>
+            {/* <img className="overlay" src={StainedPaper} alt=''/> */}
       </div>
       )
       
