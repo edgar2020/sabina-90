@@ -7,6 +7,8 @@ import './css/form.css';
 import './css/invitation.css';
 import './css/information.css';
 import './css/imageCarousel.css';
+import './css/headers.css';
+import './css/responsive.css';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

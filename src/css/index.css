@@ -15,10 +15,10 @@ background:
     var(--g3) var(--s) 0,var(--g3) 0 calc(1.73*var(--s)) 
     var(--c2);
   background-size: calc(2*var(--s)) calc(3.46*var(--s));
-overflow-x: hidden;
+/* overflow-x: hidden; */
 
   --header-background-color: whitesmoke;
-  --header-color: rgb(197, 168, 0);
+  --header-color: rgb(170, 156, 119);
 }
 
 #root
@@ -29,34 +29,33 @@ overflow-x: hidden;
   top:0;
 
 }
-
-
-
-.home_poster
+.saveTheDateOuterOuterContainer
 {
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  z-index: 334 !important;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width:100%;
+  height: 100%;
+  background-color: rgba(110, 110, 110, 0.767);
+  top: 0;
 }
-
-.SaveTheDateOuterDiv
+.saveTheDateOuterContainer
 {
-  display: flex;
-  justify-content: center;     /* Center horizontally */
-  /* /* align-items: center;        */
-  height: 100vh;       
-  border-top: 8px solid var(--c2);
-  position: relative;
-  /* background-color: rgb(133, 75, 0); */
-  /* background-color: #181006; */
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    /* background-image: url("../images/ofSabina/s11.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top; */
-    /* background-image: url("../images/tileable-wood-colored.png");
-    background-attachment: fixed;
-    background-position: center;  */
-    
+  /* width: 500px; */
+  position: fixed;
+  z-index: 334 !important;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 20px;
+  border-radius: 9px;
+  max-height: calc(100% - 10px);
+  /* background-color: rgb(255, 250, 208); */
+  top: 0;
+  overflow-x: hidden;
+  scrollbar-width: thin;             
+  scrollbar-color: #ccc transparent; 
+  
 }
 
 .saveTheDateContainer
@@ -67,75 +66,75 @@ overflow-x: hidden;
   -ms-filter: drop-shadow(5px 5px 10px #000000); /* For older versions of IE */
   filter: drop-shadow(5px 5px 10px #000000);
   background-color: darkgray;
-  height: 90vh;
-  width: 70vh;
-  z-index: 334 !important;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  /* height: 500px; */
+  width: 450px;
+  background-color: #f9f9f9;
+  overflow-y: auto; /* Enables vertical scroll */
+  z-index: 1000; /* Keep it on top */
 }
 
 
 .saveTheDateContent
 {
   text-align: center;
+  /* overflow-y: auto; */
   border-radius: 5px;
   background-color: var(--paper-color);
   height: 100%;
   color: #1f0b00;
   
+  /* padding: 10px */
 }
-
+/* 
 
 .exclamation
 {
   margin-right: -2.6vh;
   margin-left: -2.6vh;
-}
-.mainContentHeader{
+} */
+/* .mainContentHeader{
   
-  text-align: center; /* Optional: centers the text */
-  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-  font-size: 18vh; /* This is a fallback for older browsers */
+  text-align: center; 
+  font-size: clamp(1rem, 5vw, 3rem); 
+  font-size: 18vh; 
   letter-spacing: -1.1vh;
   line-height: 0.9;
   margin-top: 0px;
   margin-bottom: 0;
-}
-.contentSubHeader{
+} */
+/* .contentSubHeader{
   
-  text-align: center; /* Optional: centers the text */
-  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-  font-size: 7vh; /* This is a fallback for older browsers */
+  text-align: center; 
+  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: 7vh; 
   margin-top: -1.7vh;
   line-height: 0.9;
   margin-bottom: 0;
   
-}
-.reserveHeader{
+} */
+/* .reserveHeader{
   
-  text-align: center; /* Optional: centers the text */
-  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-  font-size: 4vh; /* This is a fallback for older browsers */
+  text-align: center; 
+  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: 4vh; 
   margin-top: 0;
   margin-bottom: 0;
   background-color: #000000;
   color: var(--paper-color);
-}
-.reserveTheDate {
+} */
+/* .reserveTheDate {
   
-  text-align: center; /* Optional: centers the text */
-  font-size: clamp(1rem, 5vw, 3rem); /* This is for modern browsers */
-  font-size: 3vh; /* This is a fallback for older browsers */
+  text-align: center; 
+  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: 3vh; 
   margin-bottom: 4vh;
   width: fit-content;
   
-}
+} */
 .old-text
 {
   mask-size: contain; 
@@ -146,22 +145,22 @@ overflow-x: hidden;
   -ms-mask-image:url("../images/crack-grunge-texture-PNG-thumb24.png");  
   mask-image: url("../images/crack-grunge-texture-PNG-thumb24.png"); 
 }
-
+/* 
 .titleInsideCalendarContainer
 {
   
   margin: 0 auto;
   margin-left: 13%;
   width: fit-content;
-}
-.fingerSpan
+} */
+/* .fingerSpan
 {
   display: inline-block;
   position: relative;
   width: fit-content;
-}
+} */
 
-.finger
+/* .finger
 {
   width: 10vh;
   transform: rotate(-10deg);
@@ -172,8 +171,8 @@ overflow-x: hidden;
 .fingerText
 {
   vertical-align: top;
-}
-.celebrarText
+} */
+/* .celebrarText
 {
   font-size: 2.2vh; 
   letter-spacing: -0.15vh;
@@ -181,13 +180,13 @@ overflow-x: hidden;
   position: absolute;
   bottom: 19vh;
   width: 100%;
-}
+} */
 
-.th-tag
+/* .th-tag
 {
   font-size: 1.2vh;
-}
-.calendar
+} */
+/* .calendar
 {
   margin-left: 0 auto;
   height: 34vh;
@@ -195,17 +194,17 @@ overflow-x: hidden;
   -webkit-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   -moz-box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
   box-shadow: 12px 8px 23px -2px rgba(0,0,0,0.75);
-}
+} */
 
-.calendarContainer
+/* .calendarContainer
 {
   
   transform: rotate(-5deg);
   width: 100%;
   height: 40vh;
-}
+} */
 
-.name
+/* .name
 {
   font-size: 11vh;
   margin-top: 0;
@@ -215,21 +214,21 @@ overflow-x: hidden;
   bottom: 11vh;
   width: 100%;
   text-align: center;
-}
+} */
 
-.fechaText
+/* .fechaText
 {
   position: absolute;
   bottom: 6vh;
   width: 100%;
   text-align: center;
   letter-spacing: -0.15vh;
-  font-size: 2.3vh; /* This is a fallback for older browsers */
-}
-.rsvpPagecontainer
+  font-size: 2.3vh; 
+} */
+/* .rsvpPagecontainer
 {
   display: block;
-}
+} */
 .overlay
 {
   border-radius: 5px;
@@ -251,24 +250,8 @@ overflow-x: hidden;
   z-index: 0;
   -ms-user-select: none;
 }
-.header_container
-{
-  width: 100vw;
-  background-color: var(--header-background-color);
-  display: flex;
-  /* display: table-row; */
-  border-bottom: 8px double var(--header-color);
-}
-.main_header_h1
-{
-  padding: 10px;
-  margin: 0;
-  font-size: 10vh;
-  text-align: left;
-  width: 100%;
-  color: var(--header-color);
-}
-.RSVPbutton
+
+/* .RSVPbutton
 {
   position: relative;
   background-color: rgb(0, 0, 0);
@@ -281,7 +264,7 @@ overflow-x: hidden;
   padding: 1.2vh;
   font-size: 2.6vh;
   border: 2px ghostwhite inset
-}
+} */
 
 .RSVPbutton:hover
 {
@@ -299,7 +282,7 @@ overflow-x: hidden;
 .RSVPbutton2
 {
 
-  background-color: rgb(0, 0, 0);
+  background-color: var(--header-color);
   color: var(--paper-color);
   border-radius: 5px;
   height: fit-content;
@@ -307,8 +290,8 @@ overflow-x: hidden;
   z-index: 1;
   border: 2px ghostwhite inset;
   width: 75px;
-  margin: auto 50px auto auto;
-  padding: 10px;
+  margin: auto 10px auto auto;
+  padding: 7px;
 }
 .RSVPbutton3
 {
@@ -318,111 +301,12 @@ overflow-x: hidden;
   border-radius: 5px;
   height: fit-content;
   font-weight: bold;
+  font-size: 17px;
   z-index: 1;
   border: 2px ghostwhite inset;
   margin: auto 50px auto auto;
-  padding: 10px;
+  padding: 7px;
+  margin-top: 15px;
 }
 
-
-@media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
-
-
-  .saveTheDateContainer
-  {
-    width: 350px;
-    max-width: 100vw;
-    height: 486px;
-    margin-top: 15px;
-  }
-
-  
-  .exclamation
-  {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  .mainContentHeader
-  {
-    margin-left: -5px;
-    font-size: 100px; 
-    letter-spacing: -8px;
-  }
-  .contentSubHeader
-  {  
-    font-size: 39px; 
-    margin-top: -10px;
-  }
-  .reserveHeader
-  {  
-    font-size: 22px;
-  }
-  .reserveTheDate 
-  { 
-    margin-top: 0;
-    font-size: 18px; 
-  }
-  
-  .titleInsideCalendarContainer
-  {
-    margin-left: 13%;
-    margin-top: 9px;
-  }
-  
-  .finger
-  {
-    width: 45px;
-    transform: rotate(-10deg);
-    margin-top: 10px;
-  }
-  
-  .celebrarText
-  {
-    font-size: 11px; 
-    letter-spacing: -1px;
-    bottom: 117px;
-    width: 100%;
-  }
-  
-  .th-tag
-  {
-    font-size: 10px;
-  }
-  .calendar
-  {
-    height: 170px;
-  }
-  
-  .calendarContainer
-  {
-    height: 200px;
-  }
-  
-  .name
-  {
-    font-size:55px;
-    bottom: 70px;
-  }
-  
-  .fechaText
-  {
-    letter-spacing: -1px;
-    font-size: 11px;
-    position: absolute; 
-    bottom: 45px;
-  
-  }  
-  .RSVPbutton
-  {
-    border-radius: 5px;
-    top: 87px;
-    border: 2px ghostwhite inset;
-    position: relative;
-    font-size: 16px;
-    padding: 6px;
-    z-index: 1;
-  }
-
-  
-}
 

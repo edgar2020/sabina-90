@@ -8,7 +8,6 @@ import Header from "./components/Header"
 import Information from "./components/Information"
 
 import ImageCarousel from './components/ImageCarousel'; // Import the component
-import Invitation from './components/Invitation'; // Import the component
 
 import s1 from './images/ofSabina/s01.jpg'
 import s2 from './images/ofSabina/s02.JPG'
@@ -48,9 +47,11 @@ function App() {
 
     const handleButtonClick = () => {
         setShowForm(true);
+        document.body.style.overflow = 'hidden';
     };
     const handleButtonExit = () => {
         setShowForm(false);
+        document.body.style.overflow = '';
     };
 
     const handleFormClose = () => {
@@ -68,13 +69,17 @@ function App() {
                 <Information open={handleButtonClick}/>
 
                 {showForm && 
-                    <div className='saveTheDateContainer sway'>
-                        <div className='saveTheDateContent '>
-                            <button className='ExitButton shimmer atkinson-200' onClick={handleButtonExit}>X</button>
-                            <Form onClose={handleFormClose}/> 
+                <div className='saveTheDateOuterOuterContainer sway'>
+                    <div className='saveTheDateOuterContainer sway'>
+                        <div className='saveTheDateContainer sway'>
+                            <div className='saveTheDateContent '>
+                                <button className='ExitButton shimmer atkinson-200' onClick={handleButtonExit}>X</button>
+                                <Form onClose={handleFormClose}/> 
+                            </div>
                         </div>
                     </div>
-         } 
+                </div>
+                } 
             </div>
         );
     };

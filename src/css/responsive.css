@@ -1,0 +1,235 @@
+@media (max-width: 450px) {
+
+.FormHeaderTitle
+{
+    /* background-color: red; */
+    margin: 0;
+    padding-top: 4px;
+    width: 100%;
+    font-size:40px;
+    line-height: 0.9;
+}
+.FormHeadersubheader
+{
+    font-size: 27px;
+    background-color: rgb(170, 156, 119);
+    color: rgb(255, 255, 255);
+    margin-bottom: 4px;
+    
+    
+}
+.ForHeaderName
+{
+    margin-top: -15px;
+    padding: 0;
+    font-size: 53px;
+}
+.FormHeaderParagraph
+{
+    padding: 0 25px;
+    font-size: 17px;
+    margin-top: -5px;
+}
+.FormBody
+{
+    padding: 12px;
+    margin-bottom: 50px;
+}
+
+.form-radio-row
+{
+    font-size: 16px;
+    width: 95px;
+    padding-top: 5px;
+}
+.form-input-box
+{
+    margin-left: 10px;
+}
+.form-input
+{
+    font-size: 16px;
+    
+}
+.form-label
+{
+    padding-top: 0px;
+    /* background-color: yellow; */
+    font-size: 16px;
+}
+.form-label-2
+{
+    font-size: 16px;
+    margin-left: 10px;
+    padding-top: 10px;
+    width:150px;
+    /* background-color: yellow; */
+    /* background-color: darkcyan; */
+    text-align: left;
+    /* width: 70%; */
+}
+#input-numberOfGuests
+{
+    display: inline-flex;
+    width: 100%;
+    /* background-color: dodgerblue; */
+    
+}
+#input-numberOfGuests-select
+{
+    font-size: 16px;
+    width: 70px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+    background: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+}
+.FormFooter
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.confirmation-header
+{
+    margin: 0;
+    font-size: 19px;
+}
+.formNavButton
+{
+  padding: 4px;
+  font-size: 16px;
+  border: 2px ghostwhite inset
+}
+
+.confirmation-paragraphs
+{
+    font-size: 16px;
+}
+
+
+ .saveTheDateContainer
+  {
+    width: 350px;
+    top: 0;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Enables vertical scroll */
+    z-index: 1000; /* Keep it on top */
+    margin-top: 0;
+  }
+
+  
+  .exclamation
+  {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .reserveTheDate 
+  { 
+    margin-top: 0;
+    font-size: 18px; 
+  }
+  
+  .titleInsideCalendarContainer
+  {
+    margin-left: 13%;
+    margin-top: 9px;
+  }
+  
+  .finger
+  {
+    width: 45px;
+    transform: rotate(-10deg);
+    margin-top: 10px;
+  }
+  
+  .celebrarText
+  {
+    font-size: 11px; 
+    letter-spacing: -1px;
+    bottom: 117px;
+    width: 100%;
+  }
+  
+  .th-tag
+  {
+    font-size: 10px;
+  }
+  .calendar
+  {
+    height: 170px;
+  }
+  
+  .calendarContainer
+  {
+    height: 200px;
+  }
+  
+  .name
+  {
+    font-size:55px;
+    bottom: 70px;
+  }
+  
+  .fechaText
+  {
+    letter-spacing: -1px;
+    font-size: 11px;
+    position: absolute; 
+    bottom: 45px;
+  
+  }  
+  .RSVPbutton
+  {
+    border-radius: 5px;
+    top: 87px;
+    border: 2px ghostwhite inset;
+    position: relative;
+    font-size: 16px;
+    padding: 6px;
+    z-index: 1;
+  }
+  .RSVPbutton2
+  {
+    font-size: 16px;
+    z-index: 1;
+    margin-left: 10px;
+    right: 0;
+    float: right;
+  }
+.main_header_h1_container
+{
+    /* background-color: saddlebrown; */
+    width: 100%;
+}
+  .main_header_h1
+    {
+        font-size: 40px;
+        /* background-color: darkblue; */
+        max-width: 250px
+    }
+}
+
+@media (max-width: 340px) {
+    .saveTheDateOuterContainer
+    {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .saveTheDateContainer
+    {
+        width:100%;
+        height: 100%;
+    }
+    .FormFooter
+    {
+        margin: 0;
+        position: relative;
+    }
+}

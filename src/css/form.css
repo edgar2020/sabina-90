@@ -1,3 +1,8 @@
+html
+{
+    --paragraph--size: 20px;
+}
+
 
 .Form
 {
@@ -6,7 +11,7 @@
     top:0;
     height: 100%;
     z-index: 100;
-    position: absolute;
+    /* position: absolute; */
     border-radius: 5px;
     
 }
@@ -45,7 +50,7 @@
 .FormHeader
 {
     /* background-color: darkblue; */
-    padding-bottom: 1vh;
+    padding-bottom: 10px;
     border-bottom: 3px double black;
 }
 .FormContainer
@@ -63,79 +68,64 @@
     margin: 0;
     padding-top: 4px;
     width: 100%;
-    font-size:8.5vh;
+    font-size: 60px;
     line-height: 0.9;
 }
 .FormHeadersubheader
 {
     padding: 0px;
     margin: 0;
-    /* margin-top: -20px; */
-    background-color: goldenrod;
-    font-size: 5.5vh;
-    
+    background-color: rgb(170, 156, 119);;
+    font-size: 35px;
     color: rgb(255, 255, 255);
 }
 .ForHeaderName
 {
     /* margin-top: -30px; */
     margin: 0;
-    margin-top: -2vh;
-    /* line-height: 0.7; */
+    margin-top: -15px;
 
-    /* background-color: darkblue; */
     padding: 0;
-    font-size: 10vh;
+    font-size: 75px;
     font-weight: bold;
 }
 .FormHeaderParagraph
 {
-    padding: 0 5vh;
+    padding: 0 20px;
     margin: 0;
-    font-size: 3.4vh;
-    /* margin-top:-30px; */
+    font-size: var(--paragraph--size);
 }
 .FormBody
 {
     position: relative;
     z-index: 1;
-    padding: 2vh;
-    /* background-color: cadetblue; */
-    height: 50%;
+    height: 150px;
 }
 .form-input-row
 {
     display: inline-flex;
-    /* justify-content: center; */
-    /* background-color: honeydew; */
-    
     width: 100%;
 }
 .form-input-row-2
 {
     display: inline-flex;
-    /* justify-content: center; */
-    /* text-align: center; */
-    
-    /* background-color: honeydew; */
-    width: 400%;
+    width: 100%;
     
 }
 .form-radio-row
 {
-    font-size: 3vh;
-    /* display: inline-flex; */
-    /* justify-content: center; */
-    /* background-color: rgb(82, 221, 82); */
-    width: 20vh;
-    padding-top: 1.5vh;
+    font-size: var(--paragraph--size);
+    width: 20%;
+    margin-left: 20px;
+    padding-top: 10px;
 }
 .form-input-box
 {
     margin: 0;
-    margin-left: 2vh;
+    margin-left: 15px;
     /* background-color: rgb(21, 255, 0); */
     width: 45%;
+    
     /* text-align: left; */
 }
 .form-input
@@ -144,24 +134,23 @@
     border: none;
     background: none;
     border-bottom: 2px solid rgb(0, 0, 0);
-    font-size: 3vh;
+    font-size: var(--paragraph--size);
 }
 .form-label
 {
     margin: 0;
-    
-    padding-top: 1.4vh;
+    padding-top: 15px;
     /* background-color: yellow; */
-    font-size: 3vh;
+    font-size: var(--paragraph--size);
     text-align: left;
     width: 100%;
 }
 .form-label-2
 {
-    font-size: 3vh;
+    font-size: var(--paragraph--size);
     margin: 0;
-    margin-left: 1vh;
-    padding-top: 2vh;
+    margin-left: 10px;
+    padding-top: 10px;
     /* background-color: yellow; */
     text-align: left;
     /* width: 70%; */
@@ -175,27 +164,23 @@
 }
 #input-numberOfGuests-select
 {
-    font-size: 3vh;
-    width: 15vh;
-    height: 5vh;
-    margin-top: 1.5vh;
-    margin-left: 1vh;
-    /* height: 3vh; */
-    /* background-color: darkblue; */
-    /* padding-top: 1.5vh; */
-    /* background-color: rgb(101, 122, 143); */
-    
+    font-size: var(--paragraph--size);
+    width: 70px;
+    height: 25px;
+    margin-top: 7px;
+    margin-left: 10px;
     background: none;
     border-bottom: 2px solid rgb(0, 0, 0);
 }
 .FormFooter
 {
     /* background-color: brown; */
-    position: absolute;
-    width: 100%;
+    position: relative;
+    /* width: 100%; */
     padding: 5px 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 223423432;
+    margin-bottom: 20px;
 }
 
 .formNavButton
@@ -206,148 +191,20 @@
   margin: auto;
   font-weight: bold;
   border-radius: 5px;
-  /* top: 16.5vh; */
   z-index: 1;
-  padding: 1.2vh;
-  font-size: 2.6vh;
-  border: 2px ghostwhite inset
+  padding: 7px;
+  font-size: var(--paragraph--size);
+  border: 2px ghostwhite inset;
 }
 
 .confirmation-paragraphs
 {
-    font-size: 2.3vh;
+    font-size: var(--paragraph--size);
 }
 
 .formNavButton:hover
 {
   border:outset
 }
-/* @media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
-{
-    \
-} */
-
-/* Portrait */
-
-@media (max-width: 450px), ((max-height: 700px) and (orientation: landscape))  {
 
 
-
-.FormHeaderTitle
-{
-    /* background-color: red; */
-    margin: 0;
-    padding-top: 4px;
-    width: 100%;
-    font-size:40px;
-    line-height: 0.9;
-}
-.FormHeadersubheader
-{
-    font-size: 27px;
-    background-color: goldenrod;
-    color: rgb(255, 255, 255);
-    margin-bottom: 4px;
-    
-    
-}
-.ForHeaderName
-{
-    margin-top: -15px;
-    padding: 0;
-    font-size: 53px;
-}
-.FormHeaderParagraph
-{
-    padding: 0 25px;
-    font-size: 17px;
-    margin-top: -5px;
-}
-.FormBody
-{
-    padding: 12px;
-}
-
-.form-radio-row
-{
-    font-size: 16px;
-    width: 95px;
-    padding-top: 5px;
-}
-.form-input-box
-{
-    margin-left: 10px;
-}
-.form-input
-{
-    font-size: 16px;
-    
-}
-.form-label
-{
-    padding-top: 0px;
-    /* background-color: yellow; */
-    font-size: 16px;
-}
-.form-label-2
-{
-    font-size: 16px;
-    margin-left: 10px;
-    padding-top: 10px;
-    width:150px;
-    /* background-color: yellow; */
-    /* background-color: darkcyan; */
-    text-align: left;
-    /* width: 70%; */
-}
-#input-numberOfGuests
-{
-    display: inline-flex;
-    width: 100%;
-    /* background-color: dodgerblue; */
-    
-}
-#input-numberOfGuests-select
-{
-    font-size: 16px;
-    width: 70px;
-    height: 25px;
-    margin-top: 10px;
-    margin-left: 10px;
-    
-    background: none;
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
-.FormFooter
-{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    z-index: 1;
-}
-.confirmation_Page
-{
-    /* background-color: darkcyan;
-    position: top; */
-}
-.confirmation-header
-{
-    margin: 0;
-    font-size: 19px;
-}
-.formNavButton
-{
-  padding: 4px;
-  font-size: 16px;
-  border: 2px ghostwhite inset
-}
-
-.confirmation-paragraphs
-{
-    font-size: 16px;
-}
-
-
-  }
-  
-  
