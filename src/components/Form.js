@@ -9,13 +9,31 @@ import { db } from '../firebase'; // adjust path to your actual file
 
 
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 import { getFirestore, collection, addDoc, serverTimestamp  } from 'firebase/firestore';
 
 function Form({ onClose }) {
   // for linking to
-
+      const sendSuccess = async (msg) => {
+        toast.success('¡Éxito! Tu acción se completó.', {
+          position: 'top-center', // Customize position
+          autoClose: 3000,                    // Auto-close after 3 seconds
+          hideProgressBar: false,             // Show or hide progress bar
+          closeOnClick: true,                 // Close on click
+          pauseOnHover: true,                 // Pause on hover
+          draggable: false,                   // Make it draggable
+          progress: undefined,               // Progress bar value (if any)
+        });
+      }
+      // Validation function
+    const sendError = async (err) => toast.error(err, {
+      position: 'top-center', // Customize position
+      autoClose: 2000,                    // Auto-close after 3 seconds
+      hideProgressBar: false,             // Show or hide progress bar
+      closeOnClick: true,                 // Close on click
+      pauseOnHover: true,                 // Pause on hover
+      draggable: false,                   // Make it draggable
+      progress: undefined,               // Progress bar value (if any)
+    });
   // will controll which page of the form user is currently at
   const [page, setPage] = useState(0);
   // will be used to exit form when done
@@ -42,17 +60,7 @@ function Form({ onClose }) {
     };
 
 
-  const sendSuccess = async (msg) => {
-    toast.success('¡Éxito! Tu acción se completó.', {
-      position: 'top-right', // Customize position
-      autoClose: 3000,                    // Auto-close after 3 seconds
-      hideProgressBar: false,             // Show or hide progress bar
-      closeOnClick: true,                 // Close on click
-      pauseOnHover: true,                 // Pause on hover
-      draggable: false,                   // Make it draggable
-      progress: undefined,               // Progress bar value (if any)
-    });
-  }
+
   
   const handleSubmit = async (e) => {
 
@@ -89,16 +97,7 @@ function Form({ onClose }) {
         }
     }
 
-    // Validation function
-    const sendError = async (err) => toast.error(err, {
-      position: 'top-right', // Customize position
-      autoClose: 2000,                    // Auto-close after 3 seconds
-      hideProgressBar: false,             // Show or hide progress bar
-      closeOnClick: true,                 // Close on click
-      pauseOnHover: true,                 // Pause on hover
-      draggable: false,                   // Make it draggable
-      progress: undefined,               // Progress bar value (if any)
-    });
+    
   
     
     const validateInputs = () => {
@@ -219,7 +218,6 @@ function Form({ onClose }) {
 
   return (
     <>
-      <ToastContainer />
       {RSVP_stage()}
       {/* {RSVP_stage()} */}
     </>

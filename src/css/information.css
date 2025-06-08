@@ -68,10 +68,15 @@ html
   margin: 0;
 }
 
+
+
 .donation_paragraph_strong
 {
-  
   font-size: var(--paragraph-font-size);
   margin-bottom: 0;
 }
 
+.donation_paragraph > strong
+{
+  font-size: 21px;
+}

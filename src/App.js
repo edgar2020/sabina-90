@@ -35,6 +35,10 @@ import s23 from './images/ofSabina/photo6.png'
 import s24 from './images/ofSabina/photo7.png'
 import s25 from './images/ofSabina/photo8.png'
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
     BrowserRouter as Router,
     Routes,
@@ -42,7 +46,7 @@ import {
 } from "react-router-dom";
 
 function App() {
-
+      
     const formRef = useRef(null); // Ref to the Form component
 
     const scrollToForm = () => {
@@ -70,6 +74,8 @@ function App() {
     const Home = () => {
         return (
             <div className="header_and_courasel">
+                
+                <ToastContainer />
                 <Header open={handleButtonClick}/>
                 <div className="home_header">
                     <ImageCarousel images={imageURLs} /> 
