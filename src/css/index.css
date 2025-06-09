@@ -75,6 +75,7 @@ html {
   -ms-user-select: none;
   /* height: 500px; */
   width: 450px;
+  height: 570px;
   background-color: #f9f9f9;
   overflow-y: auto; /* Enables vertical scroll */
   z-index: 1000; /* Keep it on top */
@@ -313,6 +314,7 @@ max-width: 100%; } */
   margin: auto 10px auto auto;
   padding: 7px;
 }
+
 .RSVPbutton3
 {
 
