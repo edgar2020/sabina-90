@@ -18,7 +18,7 @@ function Confirm({formData}) {
 
   return (
     <div className='confirmation_Page'>
-      <h2 className='confirmation-header'>¿Lo siguiente esta correcto?</h2>
+      <h2 className='confirmation-header'>¿Es correcto lo siguiente?</h2>
       <p className='confirmation-paragraphs'>Nombre: {formData.firstName}</p>
       <p className='confirmation-paragraphs'>Apellido: {formData.lastName}</p>
       {printStatus()}

@@ -11,7 +11,7 @@ function GuestInfo({formData, setFormData}) {
     {
       if(formData.isAttending === 1) {
         return <div className='form-input-2' id='input-numberOfGuests'>
-          <p className='form-label-2'>¿Con cuántas personas podemos contar?</p>
+          <p className='form-label-2'>Número de personas que nos acompañarán</p>
           <select  value={formData.numberOfGuests} id="input-numberOfGuests-select" name="numberOfGuests" onChange={(event) => setFormData({...formData, numberOfGuests: event.target.value})}>
           {/* <select id="input-numberOfGuests" name="numberOfGuests" onChange={(event) => alert(event.target.value)}> */}
             <option value="-">-</option>
@@ -48,7 +48,7 @@ function GuestInfo({formData, setFormData}) {
       </div>
       
       <div className='form-input-row-2'>
-        <p className='form-label-2'>¿Podemos contar con tu presencia?</p>
+        <p className='form-label-2'>¿Podremos contar con su presencia?</p>
 
       <div className='form-radio-row'>
         <input type="radio" value="true" id="isAttendingButton" name="attendingButtons" checked={formData.isAttending === 1} className='form-radio-input' onChange={(event) => setFormData({...formData, isAttending: 1})}/>

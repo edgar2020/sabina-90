@@ -16,7 +16,7 @@ function Form({ onClose }) {
       const sendSuccess = async (msg) => {
         toast.success('¡Éxito! Tu acción se completó.', {
           position: 'top-center', // Customize position
-          autoClose: 3000,                    // Auto-close after 3 seconds
+          autoClose: 5000,                    // Auto-close after 3 seconds
           hideProgressBar: false,             // Show or hide progress bar
           closeOnClick: true,                 // Close on click
           pauseOnHover: true,                 // Pause on hover
@@ -27,7 +27,7 @@ function Form({ onClose }) {
       // Validation function
     const sendError = async (err) => toast.error(err, {
       position: 'top-center', // Customize position
-      autoClose: 2000,                    // Auto-close after 3 seconds
+      autoClose: 5000,                    // Auto-close after 3 seconds
       hideProgressBar: false,             // Show or hide progress bar
       closeOnClick: true,                 // Close on click
       pauseOnHover: true,                 // Pause on hover
@@ -158,8 +158,8 @@ function Form({ onClose }) {
             <h1 className='ForHeaderName gwendolyn-bold'>Sabina Lomelí</h1>
             <p className='FormHeaderParagraph'>
                 Le pedimos que por favor complete la siguiente información para 
-                saber si podemos contar con tu presencia el <strong>28 de Julio, 
-                  2025</strong> en el <strong>Salon Las Palmas:</strong></p>
+                saber si podremos contar con su presencia el <strong>28 de Julio, 
+                  2025</strong> en el <strong>Salón Las Palmas:</strong></p>
             {/* <br className='br-divider'></br> */}
                 
   
@@ -204,7 +204,7 @@ function Form({ onClose }) {
   const showPrev = () =>
     {
       if(page > 0) {
-        return <button className='FormPrev formNavButton' onClick={() => {setPage((curPage) => curPage-1);}}>Volver</button>
+        return <button className='FormPrev formNavButton' onClick={() => {setPage((curPage) => curPage-1);}}>Atras</button>
       }
       else
       {
