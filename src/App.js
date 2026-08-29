@@ -73,11 +73,11 @@ import {
 
 function App() {
       
-    const formRef = useRef(null); // Ref to the Form component
+    const infoREF = useRef(null); // Ref to the Form component
 
-    const scrollToForm = () => {
-        if (formRef.current) {
-        formRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToInfo = () => {
+        if (infoREF.current) {
+        infoREF.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -125,9 +125,9 @@ function App() {
                 <ToastContainer />
                 <Header open={handleButtonClick}/>
                 <div className="home_header">
-                    <ImageCarousel images={shuffledImages} /> 
+                    <ImageCarousel images={shuffledImages} onScrollButtonClick={scrollToInfo}/> 
                 </div>
-                <Information open={handleButtonClick}/>
+                <Information scrollTargetRef={infoREF} open={handleButtonClick}/>
 
                 {showForm && 
                 <div className='saveTheDateOuterOuterContainer sway'>
@@ -150,7 +150,7 @@ function App() {
     // RSVP Page Component 
     const RSVP = () => (
         <div className="rsvpPagecontainer">
-            <Form ref={formRef} />
+            <Form  />
         </div>
     );
     // Admin Page Component 

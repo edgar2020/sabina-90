@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import Form from "./Form"
+import React, { forwardRef  } from 'react';
 
 import Frame from "../images/ofSabina/frame.png"
 
-function Information({open}) {
+function Information({open, scrollTargetRef }) {
   const handleOpen = (event) => {
     open(true); // Pass data back to parent
   };
@@ -12,7 +11,7 @@ function Information({open}) {
   return (
     <div className="donation_paragraph_container">
       <div className="donation_paragraph_inner_container">
-        <div className="donation_paragraph_left">
+        <div className="donation_paragraph_left" id="ScrollHere" ref={scrollTargetRef}>
             <img className="picture_frame" src={Frame} alt=''/>
         </div>
         

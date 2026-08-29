@@ -57,7 +57,7 @@ html{
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     vertical-align: middle;
-
+    z-index: 2;
     -moz-user-drag: none;
     -o-user-drag: none;
     user-drag: none;
@@ -88,7 +88,11 @@ html{
     opacity: var(--opacity); /* Show the active slide */
 }
 
-
+.arrow_button
+{
+    visibility: hidden;
+    z-index: 4;
+}
 
 .carousel-background-slide {
     position: absolute;
@@ -105,7 +109,7 @@ html{
     background-size: cover;
     transition-delay: 2s;
     transition: opacity 0.5s ease-in; /* Fade transition */
-    z-index: 0;
+    z-index: 1;
     overflow: hidden; /* Important for object-fit: cover */
 
 }

@@ -40,7 +40,7 @@ function Form({ onClose }) {
   const [isDone, setDone] = useState(false)
   
   // will give header of each page
-  const FormTitles = ["ESTAN INVITADOS", "ESTAN INVITADOS"]
+  const FormTitles = ["ESTAN INVITADOS", "CONFIRME"]
   // will save user's input
   const [formData, setFormData] = useState({
     firstName: "",
@@ -154,16 +154,18 @@ function Form({ onClose }) {
         <div className='FormContainer'>
           <div className='FormHeader'>
             <h1 className='FormHeaderTitle'>{FormTitles[page]}</h1>
+          {page === 0 && 
+          <>
             <h2 className='FormHeadersubheader gwendolyn-bold' >a la fiesta de 90 años de</h2>
             <h1 className='ForHeaderName gwendolyn-bold'>Sabina Lomelí</h1>
             <p className='FormHeaderParagraph'>
                 Le pedimos que por favor complete la siguiente información para 
                 saber si podremos contar con su presencia el <strong>28 de Julio, 
                   2025</strong> en el <strong>Salón Las Palmas:</strong></p>
-            {/* <br className='br-divider'></br> */}
-                
-  
-          </div>
+          </>
+            }
+          </div> 
+         
           <div className='FormBody'>
             {PageDisplay()}
           </div>
@@ -181,10 +183,10 @@ function Form({ onClose }) {
       return (
         <div className='Form'>
           <div className='thankyou_for_rsvping old-text'>
-            <h2 className='thankyou_for_rsvping_h2 geist-mono-900 '>Gracias por confirmar su asistencia.</h2>
+            <h2 className='thankyou_for_rsvping_h2 geist-mono-900 '>Gracias por confirmar<br></br>su asistencia.</h2>
             <h3 className='thankyou_for_rsvping_h3'> Puede salir del formulario. </h3>
           </div>
-            {/* <img className="overlay" src={StainedPaper} alt=''/> */}
+            <img className="overlay" src={StainedPaper} alt=''/>
       </div>
       )
       

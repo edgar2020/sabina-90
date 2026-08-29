@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images,  onScrollButtonClick  }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef(null);
 
@@ -25,23 +25,27 @@ const ImageCarousel = ({ images }) => {
   }, []);
 
   return (
+    
     <div className="carousel-container">
         <div className="image-carousel" ref={carouselRef}>
         {images.map((image, index) => (
-            <div
-                key={index}
-                className={`carousel-background-slide ${index === currentIndex ? 'active' : ''}`}
-                style={{ backgroundImage: `url(${image})` }}
-            ></div>
-            ))}
+          <div
+          key={index}
+          className={`carousel-background-slide ${index === currentIndex ? 'active' : ''}`}
+          style={{ backgroundImage: `url(${image})` }}
+          ></div>
+        ))}
 
         {images.map((image, index) => (
-        <img
-            key={index}
-            className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
-            src={image}
-            alt=''
-        />))}
+          <img
+          key={index}
+          className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
+          src={image}
+          alt=''
+          />))}
+          <div className='arrow_button_container'>
+            <button className='arrow_button shimmer' onClick={onScrollButtonClick}>↓</button>
+          </div>
         </div>
     </div>
   );
